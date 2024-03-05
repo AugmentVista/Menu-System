@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerMovement_2D playerController;
+    
     [SerializeField]
     private UIManager uiManager;
     [SerializeField]
@@ -16,6 +15,8 @@ public class Game_Manager : MonoBehaviour
     private GameObject spawnPoint;
     [SerializeField]
     private GameObject Player;
+    [SerializeField]
+    private GameObject playerArt;
 
 
     //private SerializeField levelManager;
@@ -33,6 +34,7 @@ public class Game_Manager : MonoBehaviour
         //uiManager = FindAnyObjectByType<UIManager>();
         //playerController = FindAnyObjectByType<PlayerMovement_2D>();
         //spawnPoint = GameObject.FindWithTag("SpawnPoint");
+        playerArt = FindObjectOfType<SpriteRenderer>().gameObject;
     }
     void Update()
     {
