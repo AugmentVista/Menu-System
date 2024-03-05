@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     Game_Manager gameManager;
+    [SerializeField]
+    private GameObject Player;
 
     
     void Start()

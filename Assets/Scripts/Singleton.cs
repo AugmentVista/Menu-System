@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Singleton : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    static Singleton instance;
+
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (instance != null)
+        {
+            GameObject.Destroy(this.gameObject);
+            Debug.Log(this.gameObject.name + "Already exists");
+        }
+        else
+        { 
+            GameObject.DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
     }
 }

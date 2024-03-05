@@ -12,8 +12,11 @@ public class Game_Manager : MonoBehaviour
     private LevelManager levelManager;
     [SerializeField]
     private Game_Manager gameManager;
+    [SerializeField]
     private GameObject spawnPoint;
-    
+    [SerializeField]
+    private GameObject Player;
+
 
     //private SerializeField levelManager;
     //private SerializeField uiManager;
@@ -25,11 +28,11 @@ public class Game_Manager : MonoBehaviour
 
     public void Awake() // optional if using serialized fields
     {
-        gameManager = FindAnyObjectByType<Game_Manager>();
-        levelManager = FindAnyObjectByType<LevelManager>();
-        uiManager = FindAnyObjectByType<UIManager>();
-        playerController = FindAnyObjectByType<PlayerMovement_2D>();
-        spawnPoint = GameObject.FindWithTag("SpawnPoint");
+        //gameManager = FindAnyObjectByType<Game_Manager>();
+        //levelManager = FindAnyObjectByType<LevelManager>();
+        //uiManager = FindAnyObjectByType<UIManager>();
+        //playerController = FindAnyObjectByType<PlayerMovement_2D>();
+        //spawnPoint = GameObject.FindWithTag("SpawnPoint");
     }
     void Update()
     {
