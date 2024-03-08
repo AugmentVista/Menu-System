@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Game_Manager;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject playerArt;
     [SerializeField] private PlayerMovement_2D playerController;
+    [SerializeField] private GameObject MenuCamera;
     public bool MenuOpen;
 
     public enum GameState { MainMenu, GamePlay, Paused, Options, GameOver, GameWin }
@@ -26,7 +28,6 @@ public class Game_Manager : MonoBehaviour
     {
         playerArt = FindObjectOfType<SpriteRenderer>().gameObject;
         playerController = Player.GetComponent<PlayerMovement_2D>();
-        SceneTransition.LoadMainMenu();
     }
     void Update()
     {
@@ -39,7 +40,7 @@ public class Game_Manager : MonoBehaviour
                 GamePlay();
                 break;
             case GameState.Paused:
-                GamePlay();
+                Pause();
                 break;
             case GameState.Options:
                 Options();
@@ -55,34 +56,30 @@ public class Game_Manager : MonoBehaviour
                 break;
         }
     }
-    public void MainMenu()
+    #region Non-states
+    public void MainMenuTrigger()
     {
-        OnMainMenu?.Invoke();
-        MenuIs(true);
+        gameState = GameState.MainMenu;
     }
-    public void StartGame()
+    public void StartGameTrigger()
     {
-        SceneTransition.LoadGameplay1();
+        gameState = GameState.GamePlay;
     }
-    public void GamePlay()
+    public void PauseTrigger()
     {
-        OnGamePlay?.Invoke();
-        MenuIs(false);
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Pause();
-        }
+        gameState = GameState.Paused;
     }
-    public void Pause() 
+    public void OptionsTrigger()
     {
-        OnPause?.Invoke();
-        MenuIs(true);
-
+        gameState = GameState.Options;
     }
-    public void Options() 
+    public void GameOverTrigger()
     {
-        uiManager.OptionsUI();
-        MenuIs(true);
+        gameState = GameState.GameOver;
+    }
+    public void GameWinrigger()
+    {
+        gameState = GameState.GameWin;
     }
     public void Resume()
     {
@@ -101,16 +98,6 @@ public class Game_Manager : MonoBehaviour
                 break;
         }
     }
-    public void GameOver() 
-    {
-        OnGameOver?.Invoke();
-        MenuIs(true);
-    }
-    public void GameWin() 
-    {
-        OnGameWin?.Invoke();
-        MenuIs(true);
-    }
     public void GameQuit()
     {
         Application.Quit();
@@ -120,15 +107,56 @@ public class Game_Manager : MonoBehaviour
         MenuOpen = open;
         if (MenuOpen)
         {
+            MenuCamera.SetActive(true);
             Cursor.visible = true;
             playerArt.SetActive(false);
             playerController.enabled = false;
         }
         else if (!MenuOpen)
         {
+            MenuCamera.SetActive(false);
             playerArt.SetActive(true);
             playerController.enabled = true;
             Cursor.visible = false;
         }
     }
+    #endregion
+    #region States
+    private void MainMenu()
+    {
+        OnMainMenu?.Invoke();
+        SceneTransition.LoadMainMenu();
+        MenuIs(true);
+    }
+    private void GamePlay()
+    {
+        Player.SetActive(true);
+        MenuIs(false);
+        OnGamePlay?.Invoke();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseTrigger();
+        }
+    }
+    private void Pause() 
+    {
+        OnPause?.Invoke();
+        MenuIs(true);
+    }
+    private void Options() 
+    {
+        uiManager.OptionsUI();
+        MenuIs(true);
+    }
+    private void GameOver() 
+    {
+        OnGameOver?.Invoke();
+        MenuIs(true);
+    }
+    private void GameWin() 
+    {
+        OnGameWin?.Invoke();
+        MenuIs(true);
+    }
+    #endregion
 }
