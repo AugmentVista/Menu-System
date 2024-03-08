@@ -6,19 +6,15 @@ public class Game_Manager : MonoBehaviour
 {
     [SerializeField] private UIManager uiManager;
     [SerializeField] private LevelManager levelManager;
-    [SerializeField] private GameObject spawnPoint;
-    [SerializeField] private GameObject Player;
-    [SerializeField] private GameObject playerArt;
-    [SerializeField] private PlayerMovement_2D playerController;
     [SerializeField] private GameObject MenuCamera;
-    public DreamController controller;
-    public GameObject Scene1to2Button;
-    public GameObject Scene2to2Button;
+    [SerializeField] private GameObject Player;
+    private PlayerMovement_2D playerController; 
+    private Sprite playerSprite;
+    private Component playerSpriteRenderer;
     public bool MenuOpen;
 
     public enum GameState { MainMenu, GamePlay, Paused, Options, GameOver, GameWin }
     public GameState gameState;
-
 
     public delegate void GameStateChange();
     public static event GameStateChange OnMainMenu;
@@ -26,19 +22,6 @@ public class Game_Manager : MonoBehaviour
     public static event GameStateChange OnGameOver;
     public static event GameStateChange OnGameWin;
     public static event GameStateChange OnPause;
-
-    private void Awake()
-    {
-        
-        playerArt = FindObjectOfType<SpriteRenderer>().gameObject;
-        playerController = Player.GetComponent<PlayerMovement_2D>();
-        Scene1to2Button.SetActive(false);
-        Scene2to2Button.SetActive(false);
-    }
-    private void LateUpdate()
-    {
-        controller = FindObjectOfType<DreamController>();
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.GamePlay)
@@ -74,42 +57,21 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
-    #region Non-states
+    #region Non states
+
+    #region UI Triggers
     public void MainMenuTrigger()
     {
         gameState = GameState.MainMenu;
         ChangeGameState(gameState);
     }
-    public void Button1ON()
-    {
-        Scene1to2Button.SetActive(true);
-    }
-    public void Button2ON()
-    {
-        if (controller.Win == true)
-        Scene2to2Button.SetActive(true);
-    }
-
-    public void Scene1to2Trigger()
-    {
-        if (gameState == GameState.GamePlay && Scene1to2Button != null)
-        {
-            Scene1to2Button.SetActive(true);
-        }
-    }
-    public void Scene2WinTrigger()
-    {
-        if (gameState == GameState.GamePlay && Scene2to2Button != null)
-        {
-            Scene2to2Button.SetActive(true);
-            gameState = GameState.GameWin;
-            ChangeGameState(gameState);
-        }
-    }
     public void StartGameTrigger()
     {
         gameState = GameState.GamePlay;
         ChangeGameState(gameState);
+        playerSprite = Player.GetComponent<SpriteRenderer>().sprite;
+        playerSpriteRenderer = Player.GetComponent<Renderer>();
+        playerController = Player.GetComponent<PlayerMovement_2D>();
     }
     public void PauseTrigger()
     {
@@ -131,6 +93,7 @@ public class Game_Manager : MonoBehaviour
         gameState = GameState.GameWin;
         ChangeGameState(gameState);
     }
+    #endregion
     public void Resume()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -159,18 +122,19 @@ public class Game_Manager : MonoBehaviour
         {
             MenuCamera.SetActive(true);
             Cursor.visible = true;
-            playerArt.SetActive(false);
+            playerSpriteRenderer.gameObject.SetActive(false);
             playerController.enabled = false;
         }
         else if (!MenuOpen)
         {
             MenuCamera.SetActive(false);
-            playerArt.SetActive(true);
+            playerSpriteRenderer.gameObject.SetActive(true);
             playerController.enabled = true;
             Cursor.visible = false;
         }
     }
     #endregion
+
     #region States
     private void MainMenu()
     {

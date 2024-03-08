@@ -13,8 +13,12 @@ public static class SceneTransition
     {
         SceneManager.LoadScene("Gameplay2");
     }
-    public static void LoadEndGame()
+    public static void LoadGameWin()
     {
-        SceneManager.LoadScene("EndGame");
+        SceneManager.LoadScene("GameWin");
+    }
+    public static void LoadGameLose()
+    {
+        SceneManager.LoadScene("GameLose");
     }
 }
