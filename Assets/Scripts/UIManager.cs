@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,75 +9,83 @@ public class UIManager : MonoBehaviour
     public GameObject pausedUI;
     public GameObject gameOverUI;
     public GameObject gameWinUI;
+    public bool WinConditionMet;
 
-
-    [SerializeField]
-    private GameObject StartButton;
-    [SerializeField]
-    private GameObject LoadButton;
-    [SerializeField]
-    private GameObject ExitButton;
-    
     void Start()
     {
-       
+        WinConditionMet = false;
+        UpdateUI();
+
+        Game_Manager.OnMainMenu += MainMenuUI;
+        Game_Manager.OnGamePlay += GamePlayUI;
+        Game_Manager.OnGameOver += EndGameUI;
+        Game_Manager.OnGameWin += EndGameUI;
+        Game_Manager.OnPause += PausedUI;
     }
-    public void UIMainMenu()
+
+    private void OnDestroy()
     {
+        Game_Manager.OnMainMenu -= MainMenuUI;
+        Game_Manager.OnGamePlay -= GamePlayUI;
+        Game_Manager.OnGameOver -= EndGameUI;
+        Game_Manager.OnGameWin -= EndGameUI;
+        Game_Manager.OnPause -= PausedUI;
+    }
+
+    private void UpdateUI()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        switch (currentScene.name)
+        {
+            case "MainMenu":
+                MainMenuUI();
+                break;
+            case "Gameplay1":
+            case "Gameplay2":
+                GamePlayUI();
+                break;
+            case "EndGame":
+                EndGameUI();
+                break;
+            default:
+                MainMenuUI();
+                break;
+        }
+    }
+    private void MainMenuUI()
+    {
+        HideAllUI();
         mainMenuUI.SetActive(true);
-        gamePlayUI.SetActive(false);
-        optionsUI.SetActive(false);
-        pausedUI.SetActive(false);
-        gameOverUI.SetActive(false);
-        gameWinUI.SetActive(false);
     }
-    public void UIGamePlay()
+    private void GamePlayUI()
     {
-        mainMenuUI.SetActive(false);
+        HideAllUI();
         gamePlayUI.SetActive(true);
-        optionsUI.SetActive(false);
-        pausedUI.SetActive(false);
-        gameOverUI.SetActive(false);
-        gameWinUI.SetActive(false);
     }
-    public void UIOtptions()
+    private void EndGameUI()
     {
-        mainMenuUI.SetActive(false);
-        gamePlayUI.SetActive(false);
-        optionsUI.SetActive(true);
-        pausedUI.SetActive(false);
-        gameOverUI.SetActive(false);
-        gameWinUI.SetActive(false);
+        HideAllUI();
+        if (WinConditionMet)
+        {
+            gameWinUI.SetActive(true);
+        }
+        else
+        {
+            gameOverUI.SetActive(true);
+        }
     }
-    public void UIPasued()
+    private void PausedUI()
     {
-        mainMenuUI.SetActive(false);
-        gamePlayUI.SetActive(false);
-        optionsUI.SetActive(false);
+        HideAllUI();
         pausedUI.SetActive(true);
-        gameOverUI.SetActive(false);
-        gameWinUI.SetActive(false);
     }
-    public void UIGameOver()
-    {
-        mainMenuUI.SetActive(false);
-        gamePlayUI.SetActive(false);
-        optionsUI.SetActive(false);
-        pausedUI.SetActive(false);
-        gameOverUI.SetActive(true);
-        gameWinUI.SetActive(false);
-    }
-    public void UIGameWin()
+    private void HideAllUI()
     {
         mainMenuUI.SetActive(false);
         gamePlayUI.SetActive(false);
         optionsUI.SetActive(false);
         pausedUI.SetActive(false);
         gameOverUI.SetActive(false);
-        gameWinUI.SetActive(true);
-    }
-    void Update()
-    {
-        
+        gameWinUI.SetActive(false);
     }
 }

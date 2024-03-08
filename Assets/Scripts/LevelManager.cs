@@ -1,37 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    Game_Manager gameManager;
-    [SerializeField]
-    private GameObject Player;
-
-    
-    void Start()
+    public void LoadMainMenu()
     {
-        gameManager = GetComponent<Game_Manager>();
+        SceneTransition.LoadMainMenu();
     }
-
-    //private void LoadScene()
-    //{
-    //    SceneManager.sceneLoaded += OnSceneLoaded;
-    //    if (sceneToLoad != null)
-    //    {
-    //        if (sceneToLoad.StartsWith("GamePlay"))
-    //        {
-    //            gameManager.gameState = Game_Manager.GameState.GamePlay;
-    //        }
-    //        else if (sceneToLoad == "MainMenu")
-    //        {
-    //            gameManager.gameState = Game_Manager.GameState.MainMenu;
-    //        }
-    //        else if (sceneToLoad == "EndGame")
-    //        {
-    //            gameManager.gameState = Game_Manager.GameState.GameWin;
-    //        }
-    //    }
-    //}
+    public void LoadGameplay1()
+    {
+        SceneTransition.LoadGameplay1();
+    }
+    public void LoadGameplay2()
+    {
+        SceneTransition.LoadGameplay2();
+    }
+    public void LoadEndGame()
+    {
+        SceneTransition.LoadEndGame();
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+        }
+    }
+    void PlayerToSpawnPoint() { }
 }
