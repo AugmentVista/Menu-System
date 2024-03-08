@@ -66,7 +66,7 @@ public class Game_Manager : MonoBehaviour
         Cursor.visible = false;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // Handle pause or other game play logic
+            Pause();
         }
     }
     private void Pause() 
@@ -75,6 +75,7 @@ public class Game_Manager : MonoBehaviour
         Cursor.visible = true;
         playerArt.SetActive(false);
         playerController.enabled = false;
+
     }
     private void Options() 
     {
