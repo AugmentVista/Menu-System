@@ -36,17 +36,26 @@ public class HealthController : LevelManager
                 break;
             case 100:
                 healthBarDropdown.value = 4;
+                Win = true;
                 break;
         }
+    }
+    public override void CheckWinClause()
+    {
+        if (Win)
+        {
+            Debug.Log("Has Won First Game");
+            LoadGameplay2();
+            Win = false;
+        }
+        else if (!Win)
+        return;
     }
     private void Update()
     {
         healthBar.GetComponent<Image>().fillAmount = health / 100;
         HealthUpdate();
-        if (healthBarDropdown.value == 4)
-        {
-            LoadGameplay2();
-        }
+        CheckWinClause();
     }
     public void ChangeHealthup(float amount)
     {

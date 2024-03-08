@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public interface ILevelManagerDependencies
 {
+    GameObject Player { get; }
     Transform PlayerTransform { get; }
     GameObject MainMenuUI { get; }
     GameObject GamePlayUI { get; }
@@ -27,14 +28,11 @@ public class LevelManager : UIManager
         this.dependencies = dependencies;
     }
 
-
-
     #region InheritedVariables
-    public static GameObject Player;
+    protected GameObject player => dependencies.Player;
+    protected Transform playerTransform => dependencies.PlayerTransform;
     protected bool Win;
     protected bool Lose;
-    protected Transform PlayerTransform = Player.GetComponent<Transform>();
-    protected Sprite PlayerSprite = Player.GetComponent<SpriteRenderer>().sprite;
     #endregion
 
     #region SceneCalls
@@ -68,11 +66,11 @@ public class LevelManager : UIManager
     }
     public virtual void CheckWinClause()
     {
-        if (Win)
-            GameWinUI();
-        else if (Lose)
-            GameLoseUI();
-        else return;
+        //if (Win)
+        //    Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameWin;
+        //else if (Lose)
+        //    Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameOver;
+        //else return;
     }
     protected virtual void SceneCheck()
     {
@@ -85,6 +83,6 @@ public class LevelManager : UIManager
     }
     protected virtual void PlayerToSpawnPoint() 
     { 
-        Player.transform.position = Vector3.zero;
+        player.transform.position = Vector3.zero;
     }
 }

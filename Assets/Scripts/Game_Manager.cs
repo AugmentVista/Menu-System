@@ -8,23 +8,21 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private GameObject MenuCamera;
     [SerializeField] private GameObject Player;
-    private PlayerMovement_2D playerController; 
-    private Sprite playerSprite;
-    private Component playerSpriteRenderer;
     public bool MenuOpen;
 
-    public enum GameState { MainMenu, GamePlay, Paused, Options, GameOver, GameWin }
+    public enum GameState { MainMenu, GamePlay1, GamePlay2, Paused, Options, GameOver, GameWin }
     public GameState gameState;
 
     public delegate void GameStateChange();
     public static event GameStateChange OnMainMenu;
-    public static event GameStateChange OnGamePlay;
+    public static event GameStateChange OnGamePlay1;
+    public static event GameStateChange OnGamePlay2;
     public static event GameStateChange OnGameOver;
     public static event GameStateChange OnGameWin;
     public static event GameStateChange OnPause;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.GamePlay)
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState != GameState.MainMenu)
         {
             PauseTrigger();
         }
@@ -36,8 +34,11 @@ public class Game_Manager : MonoBehaviour
             case GameState.MainMenu:
                 MainMenu();
                 break;
-            case GameState.GamePlay:
-                GamePlay();
+            case GameState.GamePlay1:
+                GamePlay1();
+                break;
+            case GameState.GamePlay2:
+                GamePlay2();
                 break;
             case GameState.Paused:
                 Pause();
@@ -67,11 +68,8 @@ public class Game_Manager : MonoBehaviour
     }
     public void StartGameTrigger()
     {
-        gameState = GameState.GamePlay;
+        gameState = GameState.GamePlay1;
         ChangeGameState(gameState);
-        playerSprite = Player.GetComponent<SpriteRenderer>().sprite;
-        playerSpriteRenderer = Player.GetComponent<Renderer>();
-        playerController = Player.GetComponent<PlayerMovement_2D>();
     }
     public void PauseTrigger()
     {
@@ -88,7 +86,7 @@ public class Game_Manager : MonoBehaviour
         gameState = GameState.GameOver;
         ChangeGameState(gameState);
     }
-    public void GameWinrigger()
+    public void GameWinTrigger()
     {
         gameState = GameState.GameWin;
         ChangeGameState(gameState);
@@ -103,8 +101,10 @@ public class Game_Manager : MonoBehaviour
                 MainMenu();
                 break;
             case "Gameplay1":
+                GamePlay1();
+                break;
             case "Gameplay2":
-                GamePlay();
+                GamePlay2();
                 break;
             default:
                 MainMenu();
@@ -122,14 +122,10 @@ public class Game_Manager : MonoBehaviour
         {
             MenuCamera.SetActive(true);
             Cursor.visible = true;
-            playerSpriteRenderer.gameObject.SetActive(false);
-            playerController.enabled = false;
         }
         else if (!MenuOpen)
         {
             MenuCamera.SetActive(false);
-            playerSpriteRenderer.gameObject.SetActive(true);
-            playerController.enabled = true;
             Cursor.visible = false;
         }
     }
@@ -142,12 +138,20 @@ public class Game_Manager : MonoBehaviour
         SceneTransition.LoadMainMenu();
         MenuIs(true);
     }
-    private void GamePlay()
+    private void GamePlay1()
     {
         Player.SetActive(true);
         SceneTransition.LoadGameplay1();
         MenuIs(true);
-        OnGamePlay?.Invoke();
+        OnGamePlay1?.Invoke();
+        
+    }
+    private void GamePlay2()
+    {
+        Player.SetActive(true);
+        SceneTransition.LoadGameplay2();
+        MenuIs(true);
+        OnGamePlay2?.Invoke();
     }
     private void Pause() 
     {

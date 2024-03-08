@@ -2,6 +2,7 @@
 
 public class DependenciesExperiment : ILevelManagerDependencies
 {
+    public GameObject Player { get; }
     public Transform PlayerTransform { get; }
     public GameObject MainMenuUI { get; }
     public GameObject GamePlayUI { get; }
@@ -12,8 +13,9 @@ public class DependenciesExperiment : ILevelManagerDependencies
     public GameObject GameWinUI { get; }
     // Implement other dependencies...
 
-    public DependenciesExperiment(Transform playerTransform, GameObject mainMenuUI, GameObject gamePlayUI, GameObject gamePlay2UI, GameObject optionsUI, GameObject pausedUI, GameObject gameOverUI, GameObject gameWinUI)
+    public DependenciesExperiment(GameObject player, Transform playerTransform, GameObject mainMenuUI, GameObject gamePlayUI, GameObject gamePlay2UI, GameObject optionsUI, GameObject pausedUI, GameObject gameOverUI, GameObject gameWinUI)
     {
+        Player = player;
         PlayerTransform = playerTransform;
         MainMenuUI = mainMenuUI;
         GamePlayUI = gamePlayUI;
@@ -27,18 +29,19 @@ public class DependenciesExperiment : ILevelManagerDependencies
 }
 public class DependenciesExperimentInitializer : MonoBehaviour
 {
-    public Transform playerTransform;
+    public GameObject player;
+    public Transform  playerTransform;
     public GameObject mainMenuUI;
     public GameObject gamePlayUI;
     public GameObject gamePlay2UI;
-    public GameObject optionsUI; // Fix typo here
+    public GameObject optionsUI; 
     public GameObject pausedUI;
     public GameObject gameOverUI;
     public GameObject gameWinUI;
 
     private void Awake()
     {
-        ILevelManagerDependencies dependencies = new DependenciesExperiment(playerTransform, mainMenuUI, gamePlayUI, gamePlay2UI, optionsUI, pausedUI, gameOverUI, gameWinUI);
+        ILevelManagerDependencies dependencies = new DependenciesExperiment(player, playerTransform, mainMenuUI, gamePlayUI, gamePlay2UI, optionsUI, pausedUI, gameOverUI, gameWinUI);
         LevelManager levelManager = new LevelManager(dependencies);
     }
 }

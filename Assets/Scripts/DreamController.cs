@@ -9,15 +9,18 @@ public class DreamController : LevelManager
 
     public DreamController(ILevelManagerDependencies dependencies) : base(dependencies)
     {
+
         // Constructor logic...
     }
+
 
     private float hope;
     public GameObject hopeBar;
     public TMP_Dropdown hopeBarDropdown;
     private bool isRunning = true;
+    int seconds = 0;
 
-    
+
     private void Start()
     {
         hope = 30;
@@ -54,24 +57,34 @@ public class DreamController : LevelManager
     protected override void SceneCheck()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Gameplay2")
+        Debug.Log(currentScene.buildIndex.ToString());
+        if (currentScene.buildIndex == 2)
         {
+            Debug.Log("BBBBBBBBBBBBBBBBBB");
             StartCoroutine(LoseHope());
         }
-        else { return; }
     }
 
     private void Update()
     {
-        hopeBar.GetComponent<Image>().fillAmount = hope / 100;
+        hopeBar.GetComponent<Image>().fillAmount = hope / 200;
         SceneCheck();
         UpdateHope();
         CheckWinClause();
         
     }
+    public override void CheckWinClause()
+    {
+        if (Win)
+            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameWin;
+        else if (Lose)
+            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameOver;
+        else return;
+    }
     IEnumerator LoseHope()
     {
-        int seconds = 0;
+        Debug.Log("Losing Hope");
+        
         while (isRunning)
         {
             Debug.Log("Running for " + seconds + " seconds");
@@ -81,6 +94,7 @@ public class DreamController : LevelManager
             if (hope == 200 || hope == 0)
             {
                 isRunning = false;
+                seconds = 0;
             }
             yield return new WaitForSeconds(1f);
         }

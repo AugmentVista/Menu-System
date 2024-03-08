@@ -15,7 +15,8 @@ public class UIManager : MonoBehaviour
     {
         UpdateUI();
         Game_Manager.OnMainMenu += MainMenuUI;
-        Game_Manager.OnGamePlay += GamePlayUI;
+        Game_Manager.OnGamePlay1 += GamePlay1UI;
+        Game_Manager.OnGamePlay1 += GamePlay2UI;
         Game_Manager.OnGameOver += GameWinUI;
         Game_Manager.OnGameWin += GameWinUI;
         Game_Manager.OnPause += PausedUI;
@@ -24,7 +25,8 @@ public class UIManager : MonoBehaviour
     private void OnDestroy()
     {
         Game_Manager.OnMainMenu -= MainMenuUI;
-        Game_Manager.OnGamePlay -= GamePlayUI;
+        Game_Manager.OnGamePlay1 -= GamePlay1UI;
+        Game_Manager.OnGamePlay1 -= GamePlay2UI;
         Game_Manager.OnGameOver -= GameWinUI;
         Game_Manager.OnGameWin -= GameWinUI;
         Game_Manager.OnPause -= PausedUI;
@@ -39,8 +41,10 @@ public class UIManager : MonoBehaviour
                 MainMenuUI();
                 break;
             case "Gameplay1":
+                GamePlay1UI();
+                break;
             case "Gameplay2":
-                GamePlayUI();
+                GamePlay2UI();
                 break;
             case "GameWin":
                 GameWinUI();
@@ -58,7 +62,7 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         mainMenuUI.SetActive(true);
     }
-    private void GamePlayUI()
+    private void GamePlay1UI()
     {
         HideAllUI();
         gamePlayUI.SetActive(true);
@@ -66,7 +70,7 @@ public class UIManager : MonoBehaviour
     private void GamePlay2UI()
     {
         HideAllUI();
-        gamePlayUI.SetActive(true);
+        gamePlay2UI.SetActive(true);
     }
     public void OptionsUI()
     {
