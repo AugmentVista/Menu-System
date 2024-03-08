@@ -1,6 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Game_Manager;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -11,6 +11,9 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private GameObject playerArt;
     [SerializeField] private PlayerMovement_2D playerController;
     [SerializeField] private GameObject MenuCamera;
+    public DreamController controller;
+    public GameObject Scene1to2Button;
+    public GameObject Scene2to2Button;
     public bool MenuOpen;
 
     public enum GameState { MainMenu, GamePlay, Paused, Options, GameOver, GameWin }
@@ -26,12 +29,26 @@ public class Game_Manager : MonoBehaviour
 
     private void Awake()
     {
+        
         playerArt = FindObjectOfType<SpriteRenderer>().gameObject;
         playerController = Player.GetComponent<PlayerMovement_2D>();
+        Scene1to2Button.SetActive(false);
+        Scene2to2Button.SetActive(false);
+    }
+    private void LateUpdate()
+    {
+        controller = FindObjectOfType<DreamController>();
     }
     void Update()
     {
-        switch (gameState)
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.GamePlay)
+        {
+            PauseTrigger();
+        }
+    }
+    public void ChangeGameState(GameState state)
+    {
+        switch (state)
         {
             case GameState.MainMenu:
                 MainMenu();
@@ -56,30 +73,63 @@ public class Game_Manager : MonoBehaviour
                 break;
         }
     }
+
     #region Non-states
     public void MainMenuTrigger()
     {
         gameState = GameState.MainMenu;
+        ChangeGameState(gameState);
+    }
+    public void Button1ON()
+    {
+        Scene1to2Button.SetActive(true);
+    }
+    public void Button2ON()
+    {
+        if (controller.Win == true)
+        Scene2to2Button.SetActive(true);
+    }
+
+    public void Scene1to2Trigger()
+    {
+        if (gameState == GameState.GamePlay && Scene1to2Button != null)
+        {
+            Scene1to2Button.SetActive(true);
+        }
+    }
+    public void Scene2WinTrigger()
+    {
+        if (gameState == GameState.GamePlay && Scene2to2Button != null)
+        {
+            Scene2to2Button.SetActive(true);
+            gameState = GameState.GameWin;
+            ChangeGameState(gameState);
+        }
     }
     public void StartGameTrigger()
     {
         gameState = GameState.GamePlay;
+        ChangeGameState(gameState);
     }
     public void PauseTrigger()
     {
         gameState = GameState.Paused;
+        ChangeGameState(gameState);
     }
     public void OptionsTrigger()
     {
         gameState = GameState.Options;
+        ChangeGameState(gameState);
     }
     public void GameOverTrigger()
     {
         gameState = GameState.GameOver;
+        ChangeGameState(gameState);
     }
     public void GameWinrigger()
     {
         gameState = GameState.GameWin;
+        ChangeGameState(gameState);
     }
     public void Resume()
     {
@@ -131,12 +181,9 @@ public class Game_Manager : MonoBehaviour
     private void GamePlay()
     {
         Player.SetActive(true);
-        MenuIs(false);
+        SceneTransition.LoadGameplay1();
+        MenuIs(true);
         OnGamePlay?.Invoke();
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseTrigger();
-        }
     }
     private void Pause() 
     {

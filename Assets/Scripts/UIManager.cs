@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    
     public GameObject mainMenuUI;
     public GameObject gamePlayUI;
     public GameObject optionsUI;
@@ -15,6 +16,7 @@ public class UIManager : MonoBehaviour
     {
         WinConditionMet = false;
         UpdateUI();
+        
 
         Game_Manager.OnMainMenu += MainMenuUI;
         Game_Manager.OnGamePlay += GamePlayUI;
