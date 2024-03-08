@@ -62,6 +62,11 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         gamePlayUI.SetActive(true);
     }
+    public void OptionsUI()
+    {
+        HideAllUI();
+        optionsUI.SetActive(true);
+    }
     private void EndGameUI()
     {
         HideAllUI();

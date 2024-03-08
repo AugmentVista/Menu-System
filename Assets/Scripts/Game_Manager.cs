@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject playerArt;
     [SerializeField] private PlayerMovement_2D playerController;
+    public bool MenuOpen;
 
     public enum GameState { MainMenu, GamePlay, Paused, Options, GameOver, GameWin }
     public GameState gameState;
@@ -48,45 +50,85 @@ public class Game_Manager : MonoBehaviour
             case GameState.GameWin:
                 GameWin();
                 break;
-                default:
-                    MainMenu();
+            default:
+                MainMenu();
                 break;
         }
     }
-    private void MainMenu()
+    public void MainMenu()
     {
         OnMainMenu?.Invoke();
-        Cursor.visible = true;
-        playerArt.SetActive(false);
-        playerController.enabled = false;
+        MenuIs(true);
     }
-    private void GamePlay()
+    public void StartGame()
+    {
+        SceneTransition.LoadGameplay1();
+    }
+    public void GamePlay()
     {
         OnGamePlay?.Invoke();
-        Cursor.visible = false;
+        MenuIs(false);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
     }
-    private void Pause() 
+    public void Pause() 
     {
         OnPause?.Invoke();
-        Cursor.visible = true;
-        playerArt.SetActive(false);
-        playerController.enabled = false;
+        MenuIs(true);
 
     }
-    private void Options() 
+    public void Options() 
     {
-        Cursor.visible = true;
-        playerArt.SetActive(false);
-        playerController.enabled = false;
+        uiManager.OptionsUI();
+        MenuIs(true);
     }
-    private void GameOver() { OnGameOver?.Invoke(); }
-    private void GameWin() { OnGameWin?.Invoke(); }
+    public void Resume()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        switch (currentScene.name)
+        {
+            case "MainMenu":
+                MainMenu();
+                break;
+            case "Gameplay1":
+            case "Gameplay2":
+                GamePlay();
+                break;
+            default:
+                MainMenu();
+                break;
+        }
+    }
+    public void GameOver() 
+    {
+        OnGameOver?.Invoke();
+        MenuIs(true);
+    }
+    public void GameWin() 
+    {
+        OnGameWin?.Invoke();
+        MenuIs(true);
+    }
     public void GameQuit()
     {
         Application.Quit();
+    }
+    private void MenuIs(bool open)
+    {
+        MenuOpen = open;
+        if (MenuOpen)
+        {
+            Cursor.visible = true;
+            playerArt.SetActive(false);
+            playerController.enabled = false;
+        }
+        else if (!MenuOpen)
+        {
+            playerArt.SetActive(true);
+            playerController.enabled = true;
+            Cursor.visible = false;
+        }
     }
 }
