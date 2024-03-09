@@ -52,9 +52,9 @@ public class LevelManager : UIManager
     {
         SceneTransition.LoadGameWin();
     }
-    public void LoadGameLose()
+    public void LoadGameOver()
     {
-        SceneTransition.LoadGameLose();
+        SceneTransition.LoadGameOver();
     }
     #endregion
 

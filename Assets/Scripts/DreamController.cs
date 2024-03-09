@@ -12,19 +12,21 @@ public class DreamController : LevelManager
 
         // Constructor logic...
     }
-
-
     private float hope;
+    private bool SpillOver = false;
     public GameObject hopeBar;
     public TMP_Dropdown hopeBarDropdown;
-    private bool isRunning = true;
-    int seconds = 0;
-
-
     private void Start()
     {
-        hope = 30;
+        Game_Manager.OnGamePlay1 += ResetScene;
+        ResetScene();
     }
+    void ResetScene()
+    {
+        hope = 3000;
+        SpillOver = false;
+    }
+
     public void UpdateHope()
     {
         switch (hope)
@@ -33,22 +35,22 @@ public class DreamController : LevelManager
                 hopeBarDropdown.value = 0;
                 Lose = true;
                 break;
-            case 30:
+            case 3000:
                 hopeBarDropdown.value = 1;
                 break;
-            case 50:
+            case 5000:
                 hopeBarDropdown.value = 2;
                 break;
-            case 70:
+            case 7000:
                 hopeBarDropdown.value = 3;
                 break;
-            case 100:
+            case 10000:
                 hopeBarDropdown.value = 4;
                 break;
-            case 150:
+            case 15000:
                 hopeBarDropdown.value = 5;
                 break;
-            case 200:
+            case 20000:
                 hopeBarDropdown.value = 6;
                 Win = true;
                 break;
@@ -56,52 +58,47 @@ public class DreamController : LevelManager
     }
     protected override void SceneCheck()
     {
+        if (hope > 10000) { SpillOver = true; }
         Scene currentScene = SceneManager.GetActiveScene();
-        Debug.Log(currentScene.buildIndex.ToString());
-        if (currentScene.buildIndex == 2)
+        if (currentScene.buildIndex == 2 && SpillOver)
         {
-            Debug.Log("BBBBBBBBBBBBBBBBBB");
-            StartCoroutine(LoseHope());
+            LoseHope();
         }
+        if (hope > 19500)
+        SpillOver = false;
+        CheckWinClause();
     }
 
     private void Update()
     {
-        hopeBar.GetComponent<Image>().fillAmount = hope / 200;
-        SceneCheck();
+        hopeBar.GetComponent<Image>().fillAmount = hope / 20000;
         UpdateHope();
-        CheckWinClause();
-        
+        SceneCheck();
     }
     public override void CheckWinClause()
     {
         if (Win)
-            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameWin;
-        else if (Lose)
-            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameOver;
-        else return;
-    }
-    IEnumerator LoseHope()
-    {
-        Debug.Log("Losing Hope");
-        
-        while (isRunning)
         {
-            Debug.Log("Running for " + seconds + " seconds");
-            seconds++;
-            hope -= 1;
-            Debug.Log("Hope is " + hope);
-            if (hope == 200 || hope == 0)
-            {
-                isRunning = false;
-                seconds = 0;
-            }
-            yield return new WaitForSeconds(1f);
+            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameWin;
+            Singleton.instance.GetComponent<Game_Manager>().ChangeGameState(Game_Manager.GameState.GameWin);
+            Debug.Log("This is where I would put my win screen if I had one");
         }
+        else if (Lose)
+        {
+            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameOver;
+            Singleton.instance.GetComponent<Game_Manager>().ChangeGameState(Game_Manager.GameState.GameOver);
+            Debug.Log("This is where I would put my lose screen if I had one");
+        }
+        else { return; }
+    }
+    void LoseHope()
+    {
+        hope --;
+        Debug.Log("Hope is " + hope);
     }
     public void Changehopeup(float amount)
     {
         hope += amount;
-        hope = Mathf.Clamp(hope, 0f, 200.0f);
+        hope = Mathf.Clamp(hope, 0f, 20000.0f);
     }
 }

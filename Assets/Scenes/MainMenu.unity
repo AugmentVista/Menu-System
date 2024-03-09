@@ -1882,7 +1882,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 250
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -6347,7 +6347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2499058681597920699
 GameObject:
   m_ObjectHideFlags: 0
@@ -7068,7 +7068,7 @@ MonoBehaviour:
   MenuCamera: {fileID: 1545113964}
   Player: {fileID: 1101122584516170276}
   MenuOpen: 0
-  gameState: 2
+  gameState: 0
 --- !u!1 &2911175320348355393
 GameObject:
   m_ObjectHideFlags: 0

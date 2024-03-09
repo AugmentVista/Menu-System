@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
         UpdateUI();
         Game_Manager.OnMainMenu += MainMenuUI;
         Game_Manager.OnGamePlay1 += GamePlay1UI;
-        Game_Manager.OnGamePlay1 += GamePlay2UI;
+        Game_Manager.OnGamePlay2 += GamePlay2UI;
         Game_Manager.OnGameOver += GameWinUI;
         Game_Manager.OnGameWin += GameWinUI;
         Game_Manager.OnPause += PausedUI;
@@ -82,10 +82,10 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         gameWinUI.SetActive(true);
     }
-    protected void GameLoseUI()
+    protected void GameOverUI()
     {
         HideAllUI();
-        gameWinUI.SetActive(true);
+        gameOverUI.SetActive(true);
     }
     private void PausedUI()
     {

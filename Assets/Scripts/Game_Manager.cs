@@ -146,7 +146,7 @@ public class Game_Manager : MonoBehaviour
         OnGamePlay1?.Invoke();
         
     }
-    private void GamePlay2()
+    public void GamePlay2()
     {
         Player.SetActive(true);
         SceneTransition.LoadGameplay2();

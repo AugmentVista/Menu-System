@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class HealthController : LevelManager
 {
@@ -16,8 +17,15 @@ public class HealthController : LevelManager
 
     private void Start()
     {
+        Game_Manager.OnGamePlay1 += ResetScene;
+        ResetScene();
+    }
+
+    private void ResetScene()
+    {
         health = 20;
     }
+
     public void HealthUpdate()
     {
         switch (health)
@@ -45,7 +53,7 @@ public class HealthController : LevelManager
         if (Win)
         {
             Debug.Log("Has Won First Game");
-            LoadGameplay2();
+            Singleton.instance.GetComponent<Game_Manager>().GamePlay2();
             Win = false;
         }
         else if (!Win)
@@ -53,9 +61,13 @@ public class HealthController : LevelManager
     }
     private void Update()
     {
+        if (!Win) // Purely to remove the number of things being updated
+        {
         healthBar.GetComponent<Image>().fillAmount = health / 100;
         HealthUpdate();
         CheckWinClause();
+            Debug.Log("Are we there yet Mr.Krabs?");
+        }
     }
     public void ChangeHealthup(float amount)
     {

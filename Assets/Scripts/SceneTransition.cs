@@ -17,7 +17,7 @@ public static class SceneTransition
     {
         SceneManager.LoadScene("GameWin");
     }
-    public static void LoadGameLose()
+    public static void LoadGameOver()
     {
         SceneManager.LoadScene("GameLose");
     }
