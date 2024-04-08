@@ -1,0 +1,4266 @@
+fileFormatVersion: 2
+guid: 17fe2a15c81aec048957c11691c66eaa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PumpkinNPC_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1279
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af18967f16da4bd48a0fbfcf941ab820
+      internalID: -473929766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1279
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aece59df20420414a9b9cd0ced266354
+      internalID: 582073196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1280
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c12a932ddc158448b8a6546c3e45df1
+      internalID: -952918260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1280
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ac1b073a4425e438b0ef3b7d2fe616
+      internalID: -2095009161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1279
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b96d737b6c8604d88c51569c36dfdc
+      internalID: -1892630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_8
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1279
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5499427ab26696e47816aade8b25eb89
+      internalID: 1133786969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_10
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1278
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972e698ff3486124bb752ecffbcfea3f
+      internalID: 1855148650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_23
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1215
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b8e32bc507df94c94e3add34fb6344
+      internalID: 1449383172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_24
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1215
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a87ff5d4b804af4287867d31f4bca2c
+      internalID: -2062141301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_25
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1216
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1936bc29262dd459c80692d3787ba4
+      internalID: -865342040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_26
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1215
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6731bc5203ea0664fab5cbba003eceb3
+      internalID: -789050747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1216
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1b9db9b10fb1f40b3662ea2727521e
+      internalID: 565467801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_30
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1216
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5459183b0f46a40b9d589ed1954790
+      internalID: -359537536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_31
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1215
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fc789340ba1924eaa7339196bca5a0
+      internalID: 1473269181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_36
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1152
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33c28b7b99efbf4e888ae57c33283f5
+      internalID: -1343823337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1152
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35f9730d14cd774f9260718e7eac3ab
+      internalID: -731762318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_38
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1152
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df94a6a4097a5dc49b99f15dfeaa47dc
+      internalID: 1230588019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_39
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1152
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3709c09398d8b9b4cb5b5dcf397f2d3a
+      internalID: 2143333921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_41
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1152
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afdd92dc61a7cbc45b76159c91abaf9f
+      internalID: -1787399692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_44
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1152
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0563ec8d732bb634782ff7127e00f63f
+      internalID: 212821035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_46
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1152
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c556f09669b7a734da3a0292c3fad65a
+      internalID: -701950353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1088
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d319255a8aafc4b97b7ba82dcdaaff
+      internalID: -1511090478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1087
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074e544764a0f8e4894bdc820ba8e85b
+      internalID: -439749090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_51
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1088
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5afaff1c2f85942a5d3e4e81d3ad40
+      internalID: 1686979586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_53
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1087
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2eb5ce59d1a39469ad5a3f683922a9
+      internalID: -551971506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_55
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1087
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88a838aa2e5a634b8e65c6a8b4abe36
+      internalID: -1596358753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_56
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1088
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a94b6adff6fed4ebcca522f8c0dc0e
+      internalID: -130890238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1088
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc74188af592be40a41414d4b2893f5
+      internalID: -690349207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_62
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1024
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de08c7e859925044f9176f1be88886a9
+      internalID: -2012960679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_64
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1022
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80dbeea183db0246887a09d5b1e82d2
+      internalID: -968635368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_65
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1023
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e0df65e4d4d7f4186cd850fd7bd41a
+      internalID: 1434509218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_67
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1023
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a073a5ec835e8b4b904dc00f1d05b94
+      internalID: -1114449512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_68
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1025
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca75f5fc2f159b749b86fb4fc936f557
+      internalID: 883928351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_69
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1023
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9eded8efaa43f489b4cecd606b17ce
+      internalID: -1793876754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_70
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1024
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e0793e982682a4b83ddd7c2d268fb2
+      internalID: 550916061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_71
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1023
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccf4967e60ee8f45b6354ff2ceb6a8f
+      internalID: -209887111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_79
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 960
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9b238c4a72a4140b5c7316473292c2
+      internalID: 251335536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_81
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 959
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979c91e685ffa2b4e97a688df1fa6db0
+      internalID: 1243455364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_82
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 960
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1115328921672d40b238900457a1479
+      internalID: 6490467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_83
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 959
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e3bcd881263874aa95d468ffd8e00d
+      internalID: -1269998694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_84
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 959
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb4f32a61ac9ce4f8fe5b5596991644
+      internalID: 2123366197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_85
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 959
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16339797871ab9843b35eca7c158131a
+      internalID: 1568690854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_86
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 960
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dda47f4536a39149b328f8ba48373e3
+      internalID: 1257492274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_87
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 960
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7edce242c89a424f81a363230258124
+      internalID: -445341648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_94
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 895
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a0ef21d67d60e4bb4c92cb59f0a8ca
+      internalID: 965622981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_95
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 896
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a9afdc29c49b542814bf7f6b75a6c6
+      internalID: 1599628385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_96
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 895
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea7953ee4579e8459d222d5376b2c5a
+      internalID: 1010486804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_97
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 897
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5596d62abfb735c49bca7122c24fe424
+      internalID: -1064292237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_98
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 897
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed330e75101a40848a23dcff8da71974
+      internalID: 1270057295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_99
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 896
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f8de58dbba2954197e2a3a880730f4
+      internalID: 199374363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_100
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 897
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908b3067af7aee84f9a697c4a5ad1a28
+      internalID: -1919062410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_101
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 897
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae03a7b9bd26e842b1b93cee147eef4
+      internalID: 714161954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_104
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 832
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f117226bcac7538468ff05d82dd0ecc7
+      internalID: 371672931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_106
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 830
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf9a58e3256d8c42b88711d1df73637
+      internalID: -460925715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_107
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 832
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f955c5e30185264281e408247708b8a
+      internalID: 743624909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_108
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 831
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6738bcde6b96442861775031f55545
+      internalID: -688489050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_109
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 831
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13bf2047a7b88f45b36d8478afd38f1
+      internalID: 1874193269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_110
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 830
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ae5a66cba71054d83929f37a94e23c
+      internalID: 1214075687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_111
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 832
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8f7e140a90b3940a28016d16b8accc
+      internalID: 1682507219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_112
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 830
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2955c8a617280e64081712cb11199ee5
+      internalID: -767955134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_118
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 768
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0f37627b62eb949b341f0fda93f1ee
+      internalID: -1225761688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_119
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 768
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1030f583200b848b28d0f2a36401f2
+      internalID: -1792181524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_120
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 768
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfd026a9d34f464d8b36878661c93e4
+      internalID: -628195052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_121
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 768
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482bd136333fba0478c14115c30dccaf
+      internalID: 270039824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_122
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 768
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65c3d42a5c5ea24082d53fb93e178fd
+      internalID: -424458920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_123
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 768
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6f97d259cefd24ab4f3782610b3b23
+      internalID: -297614456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_124
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 768
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509fb144b461dd64186509af40b24f2f
+      internalID: 319289891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_125
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 768
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a15f59771e2a348bde473c53b0563e
+      internalID: -1860814609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_126
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 768
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbab0f089ef3b53419d5d2d523ad6554
+      internalID: -1059603691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_128
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 704
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594fd57ee4ed58344a4a567155d3d9d8
+      internalID: -1919729058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_129
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 703
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ac31bcbaf231e47a2055d8366478fe
+      internalID: 1637488241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_131
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 703
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ea462adf917a648af2d1d8ec179c08
+      internalID: 200057797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_133
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 704
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0578cf142f772c41820fd89b57a142a
+      internalID: 273899475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_135
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 703
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f0ef0c1bcdeab4da8b042fe622c8f9
+      internalID: -1573094736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_136
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 703
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be582aec08fe2a647bf66e568eca94d1
+      internalID: -874165524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_138
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 702
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c8a602ce75019488859f74a4bee1be
+      internalID: -1522290276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_140
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 703
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1efc6c4e9ce8d947b44eec95db8d4da
+      internalID: -1447285785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_142
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 702
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd700bb2cb152f43b6dcbf1b7e13bc8
+      internalID: 1544201711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_145
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 640
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111819acf9ecdc44cb1ef518ef909571
+      internalID: -1958250544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_146
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 640
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa72afafdbd4403478833e64e4754f3c
+      internalID: -73224957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_147
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 640
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa28343a28dcaed48b12ff2815a54375
+      internalID: 1292508009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_148
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 640
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b40159a0fff624bb79f552ffad536b
+      internalID: 754170830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_149
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 640
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685d26e73071dcd498f6bbd558e863e7
+      internalID: 831603045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_150
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 640
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197bec7f610a849479656b2709a780ff
+      internalID: -1751981592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_151
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 640
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae24298837d8124ebc8c8c9296c8193
+      internalID: -1521684026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_152
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 640
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3693b31e31a23244192290b14d5372dc
+      internalID: 1443666501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_153
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 640
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f67b89da46743143b8ce4d1d12ee3cf
+      internalID: 523116667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_154
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 576
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca268be445070f49b6a910571740109
+      internalID: 1649913039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_155
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 577
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13770c9f5c2741949870936d7cc79937
+      internalID: 2070592090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_156
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 576
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8afd1b25ff79b4ea07256ebd7c5831
+      internalID: -220849837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_159
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 575
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f50f40b346202a41b9ac368537cdb61
+      internalID: -1845894537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_160
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 576
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befe50249aa11d2428a59431960591fd
+      internalID: -539455627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_161
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 576
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aeff0267ee222746a6b1848327c91e3
+      internalID: 1815629677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_162
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 576
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7797b593db8d445b8de26fe786e85f
+      internalID: 829006147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_164
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 575
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeb51b100aca8344b28ee08406a1212
+      internalID: -1835374628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_166
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 575
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f83f86e1e52f94eb94a7a12ca369ce
+      internalID: 1706089408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_169
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 511
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa52a4da584db147b1dc62b5ad0b22b
+      internalID: 1739949853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_170
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 511
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fd54e236689ba40bbecacc84208434
+      internalID: -1495741534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_171
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 512
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92913d2c5e9080446ac2b09bf490f6bb
+      internalID: -347611823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_172
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 511
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1307cfe7372443a429a96dfb416390a8
+      internalID: 1683827520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_173
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 510
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23eb117ec35128d4899ab62dfb65f96d
+      internalID: -767346479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_175
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 512
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396fb8ae7fed37c4ea1dffebf04eb046
+      internalID: -1986567207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_188
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 448
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace34dd00861f5d45bb67c331a257d74
+      internalID: -952075134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_189
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 447
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f809a6c257fc75419874ac216862f6d
+      internalID: 1374028328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_190
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 447
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479b67b74adefae4f85b35c544665dec
+      internalID: 21416007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_191
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 448
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be1842e8abe1b3428ff32f6bfa51c09
+      internalID: -14337274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_193
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 448
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c60d89421accd84483fd28a08cca981
+      internalID: 1689935062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_194
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 448
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c09e96e6555f745995ae81a7884648
+      internalID: 1096596058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_207
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 383
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7534f33b07508a47b1ccaccaf4181b1
+      internalID: -825945319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_208
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 384
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c05f5c19e19d544c9e18f02255b5b47
+      internalID: 1478147571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_209
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 384
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa61c72c1e72be47ac713207769c2fc
+      internalID: -879797182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_210
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 384
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3c1250a25380143b7c9ac1bf5815bc
+      internalID: -888610831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_211
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 383
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05c65ccc35ebe34ba5c47d3a77fc62f
+      internalID: 1972582767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_213
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 384
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea11dccfb0b77c1418b085fcb497d058
+      internalID: -668805229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_229
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 318
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9cc0544f1ded841b3a0827253e361f
+      internalID: 502596992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_230
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 320
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118b67cb4367b374aabdc86931da5bc9
+      internalID: -1417461536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_231
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 320
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb88a2c8ec70ce499dc2c56fa00493a
+      internalID: -1293591448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_232
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 320
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6bcc07568a8a94083e0029bb45e89e
+      internalID: 998389144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_233
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 319
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe0abb2b720f50439aa9838ff935dcf
+      internalID: -880816505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_235
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 320
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328e37edaca09d146aaa8ab10f8a5ca2
+      internalID: 1160655795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_247
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 253
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e24a585dda343b419115ceafd3c1129
+      internalID: -860753416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_248
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1045614ccbf2b1d4eba42e4b595e8e81
+      internalID: 1339770738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_249
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 255
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea2b2e222535b94f9e5f68f789bd486
+      internalID: 138101087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_250
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 256
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4b29e1118213041b46682dfb0da0cb
+      internalID: -944201130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_251
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 256
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed82a7c29901bc478ff9fef33868792
+      internalID: 757075829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_252
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 255
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0aff344530c8944da2dca465a932690
+      internalID: 1493572626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_253
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 255
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2c6a2a57de54742a92db0529a3c26b
+      internalID: -713920131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_254
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 256
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105301c2765219c4eb487f6c07eb14a1
+      internalID: -76425764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_255
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 255
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9110d1c3436a3674e950adeded02fbbe
+      internalID: -1599930983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_256
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 256
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc179f14d0fb11947a490619ced676d7
+      internalID: -1592265295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_257
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 255
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b4c4133d5a7b34188d73789ad3004e
+      internalID: -1401250101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_258
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 257
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c5b5dfe6748f04dbadee55571629ee
+      internalID: 1618111614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_259
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 255
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd8cf212c17ef1488437ff4167986fe
+      internalID: 1675521877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_279
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 191
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925210a5d22e1c04da5428df09af1456
+      internalID: 944701281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_280
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1d490e27e817a4db87afd4a9b26ea5
+      internalID: 1693447113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_281
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 191
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60841713db50aff45b2dd436eee6c6d2
+      internalID: 1553261332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_282
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 191
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b7d586d67e4ac489cb93bdbedc3139
+      internalID: -589873091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_284
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 191
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03dd05e73d03aee4b9cdea4e2baeaa92
+      internalID: 176585502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_286
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 192
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118ed368b80953f4c842aff57569f783
+      internalID: -1083250051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_288
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 191
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8804813e33836d64fa780a640c3e9b98
+      internalID: 2138208176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_290
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 193
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c5f62c338349540a6259440e65e2d2
+      internalID: 1416600636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_292
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 193
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959a1333ecfd6e4419de4b503e759fd5
+      internalID: -954275035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_294
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 193
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206dfe388001eb1468b501a7f09d447d
+      internalID: -1030219917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_296
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 193
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe29e2beb266dd46a6d6605d339bddc
+      internalID: -763127888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_298
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 193
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacafffe848592a449210a3ac0782654
+      internalID: 1990757065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_300
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 191
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6327486c4ac1eb143b4fcfd84110ea9c
+      internalID: -558094087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_322
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e419fb5737bf84fa05cef380c2282e
+      internalID: 256649084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_324
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 127
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44f5a9505b9f99409e456e4d6118db3
+      internalID: -1976057526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_325
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 127
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcaac32f3a493b45b3852fb7579d286
+      internalID: 1209647284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_326
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 127
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5507559f93e8d0647a215e8c15a17256
+      internalID: 1750273138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_327
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 127
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9b00d1532a58741b4c2e4105b1a3f2
+      internalID: -364735098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_328
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 127
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d83a3d59bbbe4745a1804fb394dee49
+      internalID: -289220587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_329
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 128
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a50967ea686684fb700448a235989d
+      internalID: -1222944753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_330
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 128
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cc8e01cfe56874fa2424a14eed7197
+      internalID: -580077606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_331
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 128
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af49d5f52b7eb75419433b1307e39bbf
+      internalID: 1098980013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_332
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 128
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9d89c2f97b9d94f8303f9b234dc428
+      internalID: -430625306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_333
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 128
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4567cf9e73e60b24c8cddb76696944fc
+      internalID: -2146057975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_334
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 127
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970e5b1b8a1aa424d8c8dc2cb95ef86d
+      internalID: 1090610639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_335
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 128
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6549d59a1c81504dad609372eb909c8
+      internalID: 171001285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_352
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 64
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbe61eb489cc544eaf596bbad3e1d0a
+      internalID: -1691310385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_353
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16731779cee62aa478ecc4940a4263d7
+      internalID: -793513054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_354
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a89f11bf09ba64a8ac13bc44b5a2d0
+      internalID: 2043569044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_355
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 63
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbcd7d9d34f06b428277dfcc824f6a7
+      internalID: 651328908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_356
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e3f9f0c52e11047b4f4b6a5e6d4f58
+      internalID: 2108919871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_358
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 63
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ba62999dbf22b4d914ae12e114161b
+      internalID: -955379922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_360
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a03088e859fb6044a073fb86e593f2c
+      internalID: -143693297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_362
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 63
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fea273c20c6b0b4f894e82ab4f6d3ae
+      internalID: -2036154742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_364
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 63
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f4426ecde18564393fcacad6faed90
+      internalID: -1996074437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_366
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 64
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb48e6b9783e5740a5f19e48248da5c
+      internalID: 1188550435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_368
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 63
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7373df26e9ff24eb919e9cc7be19cb
+      internalID: 630852517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_370
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 63
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b84679feb2ea44290cba4b8de84ce8
+      internalID: 188916171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_372
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 64
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31624dd0efdf19479b4b846eb71debd
+      internalID: -1555310562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_395
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16ced1fece57c244b4b6ddec8c66e63
+      internalID: -177019687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_396
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c54c3457756893478e2e4510e86b6cc
+      internalID: 2078326161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_397
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a1a8573a2c34249b962d9c488e81b2
+      internalID: 2129825705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_398
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb93138cde5b4ec44924b868913dea00
+      internalID: -1064068986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_399
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7ef819726241c4187875f51413509f
+      internalID: -712889775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkinNPC_400
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157779c34413e7546b97ee8f301df8e2
+      internalID: -1238205932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4554528106169964083678a42e008d27
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PumpkinNPC_0: -473929766
+      PumpkinNPC_1: 582073196
+      PumpkinNPC_10: 1855148650
+      PumpkinNPC_100: -1919062410
+      PumpkinNPC_101: 714161954
+      PumpkinNPC_102: -429825805
+      PumpkinNPC_103: 54512797
+      PumpkinNPC_104: 371672931
+      PumpkinNPC_105: -1754171049
+      PumpkinNPC_106: -460925715
+      PumpkinNPC_107: 743624909
+      PumpkinNPC_108: -688489050
+      PumpkinNPC_109: 1874193269
+      PumpkinNPC_11: -1821184779
+      PumpkinNPC_110: 1214075687
+      PumpkinNPC_111: 1682507219
+      PumpkinNPC_112: -767955134
+      PumpkinNPC_113: -957575990
+      PumpkinNPC_114: 241124060
+      PumpkinNPC_115: 704483757
+      PumpkinNPC_116: -207413830
+      PumpkinNPC_117: 604756680
+      PumpkinNPC_118: -1225761688
+      PumpkinNPC_119: -1792181524
+      PumpkinNPC_12: 1069262223
+      PumpkinNPC_120: -628195052
+      PumpkinNPC_121: 270039824
+      PumpkinNPC_122: -424458920
+      PumpkinNPC_123: -297614456
+      PumpkinNPC_124: 319289891
+      PumpkinNPC_125: -1860814609
+      PumpkinNPC_126: -1059603691
+      PumpkinNPC_127: 2086445286
+      PumpkinNPC_128: -1919729058
+      PumpkinNPC_129: 1637488241
+      PumpkinNPC_13: -1821101339
+      PumpkinNPC_130: 2008450039
+      PumpkinNPC_131: 200057797
+      PumpkinNPC_132: -1618370131
+      PumpkinNPC_133: 273899475
+      PumpkinNPC_134: 1462091397
+      PumpkinNPC_135: -1573094736
+      PumpkinNPC_136: -874165524
+      PumpkinNPC_137: -1547736697
+      PumpkinNPC_138: -1522290276
+      PumpkinNPC_139: -1363871014
+      PumpkinNPC_14: -829609585
+      PumpkinNPC_140: -1447285785
+      PumpkinNPC_141: -394385763
+      PumpkinNPC_142: 1544201711
+      PumpkinNPC_143: -1473592598
+      PumpkinNPC_144: 183535716
+      PumpkinNPC_145: -1958250544
+      PumpkinNPC_146: -73224957
+      PumpkinNPC_147: 1292508009
+      PumpkinNPC_148: 754170830
+      PumpkinNPC_149: 831603045
+      PumpkinNPC_15: -894075280
+      PumpkinNPC_150: -1751981592
+      PumpkinNPC_151: -1521684026
+      PumpkinNPC_152: 1443666501
+      PumpkinNPC_153: 523116667
+      PumpkinNPC_154: 1649913039
+      PumpkinNPC_155: 2070592090
+      PumpkinNPC_156: -220849837
+      PumpkinNPC_157: -1909985169
+      PumpkinNPC_158: 1534932204
+      PumpkinNPC_159: -1845894537
+      PumpkinNPC_16: -563541271
+      PumpkinNPC_160: -539455627
+      PumpkinNPC_161: 1815629677
+      PumpkinNPC_162: 829006147
+      PumpkinNPC_163: 785092280
+      PumpkinNPC_164: -1835374628
+      PumpkinNPC_165: 1896853642
+      PumpkinNPC_166: 1706089408
+      PumpkinNPC_167: 1178573278
+      PumpkinNPC_168: 1583203639
+      PumpkinNPC_169: 1739949853
+      PumpkinNPC_17: -658470649
+      PumpkinNPC_170: -1495741534
+      PumpkinNPC_171: -347611823
+      PumpkinNPC_172: 1683827520
+      PumpkinNPC_173: -767346479
+      PumpkinNPC_174: 1658140615
+      PumpkinNPC_175: -1986567207
+      PumpkinNPC_176: 1722961949
+      PumpkinNPC_177: -565375931
+      PumpkinNPC_178: 782132373
+      PumpkinNPC_179: -826767370
+      PumpkinNPC_18: -1346011144
+      PumpkinNPC_180: 2132620511
+      PumpkinNPC_181: 436020100
+      PumpkinNPC_182: -235390858
+      PumpkinNPC_183: -733153963
+      PumpkinNPC_184: 986068998
+      PumpkinNPC_185: -1064751010
+      PumpkinNPC_186: -437430854
+      PumpkinNPC_187: -574591724
+      PumpkinNPC_188: -952075134
+      PumpkinNPC_189: 1374028328
+      PumpkinNPC_19: -1887726243
+      PumpkinNPC_190: 21416007
+      PumpkinNPC_191: -14337274
+      PumpkinNPC_192: -871215807
+      PumpkinNPC_193: 1689935062
+      PumpkinNPC_194: 1096596058
+      PumpkinNPC_195: -977911060
+      PumpkinNPC_196: -1595948476
+      PumpkinNPC_197: -679834887
+      PumpkinNPC_198: -819627195
+      PumpkinNPC_199: 792435544
+      PumpkinNPC_2: -952918260
+      PumpkinNPC_20: 877430422
+      PumpkinNPC_200: 1900851911
+      PumpkinNPC_201: 1256664969
+      PumpkinNPC_202: -986565289
+      PumpkinNPC_203: 1912594245
+      PumpkinNPC_204: 450117979
+      PumpkinNPC_205: -189479049
+      PumpkinNPC_206: 1506437113
+      PumpkinNPC_207: -825945319
+      PumpkinNPC_208: 1478147571
+      PumpkinNPC_209: -879797182
+      PumpkinNPC_21: 1597651716
+      PumpkinNPC_210: -888610831
+      PumpkinNPC_211: 1972582767
+      PumpkinNPC_212: 1324773866
+      PumpkinNPC_213: -668805229
+      PumpkinNPC_214: -2122208696
+      PumpkinNPC_215: 1599256388
+      PumpkinNPC_216: -992808716
+      PumpkinNPC_217: 1230774944
+      PumpkinNPC_218: 68173141
+      PumpkinNPC_219: 175622694
+      PumpkinNPC_22: 487820884
+      PumpkinNPC_220: 1729116563
+      PumpkinNPC_221: -2860633
+      PumpkinNPC_222: -1729687137
+      PumpkinNPC_223: 775461600
+      PumpkinNPC_224: 1537924567
+      PumpkinNPC_225: 883676280
+      PumpkinNPC_226: -905111938
+      PumpkinNPC_227: -799321504
+      PumpkinNPC_228: 114627917
+      PumpkinNPC_229: 502596992
+      PumpkinNPC_23: 1449383172
+      PumpkinNPC_230: -1417461536
+      PumpkinNPC_231: -1293591448
+      PumpkinNPC_232: 998389144
+      PumpkinNPC_233: -880816505
+      PumpkinNPC_234: 1634832263
+      PumpkinNPC_235: 1160655795
+      PumpkinNPC_236: -1474760194
+      PumpkinNPC_237: -799385931
+      PumpkinNPC_238: 1467874988
+      PumpkinNPC_239: 989164307
+      PumpkinNPC_24: -2062141301
+      PumpkinNPC_240: -1979937303
+      PumpkinNPC_241: 720281273
+      PumpkinNPC_242: 1164887990
+      PumpkinNPC_243: 1078967963
+      PumpkinNPC_244: -1406654575
+      PumpkinNPC_245: 460114343
+      PumpkinNPC_246: -523459855
+      PumpkinNPC_247: -860753416
+      PumpkinNPC_248: 1339770738
+      PumpkinNPC_249: 138101087
+      PumpkinNPC_25: -865342040
+      PumpkinNPC_250: -944201130
+      PumpkinNPC_251: 757075829
+      PumpkinNPC_252: 1493572626
+      PumpkinNPC_253: -713920131
+      PumpkinNPC_254: -76425764
+      PumpkinNPC_255: -1599930983
+      PumpkinNPC_256: -1592265295
+      PumpkinNPC_257: -1401250101
+      PumpkinNPC_258: 1618111614
+      PumpkinNPC_259: 1675521877
+      PumpkinNPC_26: -789050747
+      PumpkinNPC_260: -162679749
+      PumpkinNPC_261: 554230507
+      PumpkinNPC_262: -1813320895
+      PumpkinNPC_263: 1749334519
+      PumpkinNPC_264: -562448485
+      PumpkinNPC_265: -912384516
+      PumpkinNPC_266: 759892432
+      PumpkinNPC_267: -844945365
+      PumpkinNPC_268: 394320264
+      PumpkinNPC_269: -1569323247
+      PumpkinNPC_27: 379742401
+      PumpkinNPC_270: -1935437127
+      PumpkinNPC_271: -1259514573
+      PumpkinNPC_272: 1876065646
+      PumpkinNPC_273: -716096666
+      PumpkinNPC_274: -1044729152
+      PumpkinNPC_275: -1884908730
+      PumpkinNPC_276: -287735743
+      PumpkinNPC_277: -2128235663
+      PumpkinNPC_278: -1422227056
+      PumpkinNPC_279: 944701281
+      PumpkinNPC_28: 565467801
+      PumpkinNPC_280: 1693447113
+      PumpkinNPC_281: 1553261332
+      PumpkinNPC_282: -589873091
+      PumpkinNPC_283: -10411763
+      PumpkinNPC_284: 176585502
+      PumpkinNPC_285: 835669266
+      PumpkinNPC_286: -1083250051
+      PumpkinNPC_287: -1231560909
+      PumpkinNPC_288: 2138208176
+      PumpkinNPC_289: 451817745
+      PumpkinNPC_29: 900812753
+      PumpkinNPC_290: 1416600636
+      PumpkinNPC_291: 1586564342
+      PumpkinNPC_292: -954275035
+      PumpkinNPC_293: 1483716289
+      PumpkinNPC_294: -1030219917
+      PumpkinNPC_295: -33588409
+      PumpkinNPC_296: -763127888
+      PumpkinNPC_297: -1549315899
+      PumpkinNPC_298: 1990757065
+      PumpkinNPC_299: 2048297875
+      PumpkinNPC_3: -2095009161
+      PumpkinNPC_30: -359537536
+      PumpkinNPC_300: -558094087
+      PumpkinNPC_301: -2121463475
+      PumpkinNPC_302: -365587842
+      PumpkinNPC_303: 1859514123
+      PumpkinNPC_304: 9486769
+      PumpkinNPC_305: -777586377
+      PumpkinNPC_306: 1894415288
+      PumpkinNPC_307: -1593748140
+      PumpkinNPC_308: 960003840
+      PumpkinNPC_309: -168927685
+      PumpkinNPC_31: 1473269181
+      PumpkinNPC_310: 1072081644
+      PumpkinNPC_311: -702299039
+      PumpkinNPC_312: 1323008352
+      PumpkinNPC_313: 1044891432
+      PumpkinNPC_314: 401114325
+      PumpkinNPC_315: -1263154931
+      PumpkinNPC_316: -1196537814
+      PumpkinNPC_317: 1354803693
+      PumpkinNPC_318: 330750520
+      PumpkinNPC_319: -1816770188
+      PumpkinNPC_32: 1473883956
+      PumpkinNPC_320: 1849053523
+      PumpkinNPC_321: -1543971447
+      PumpkinNPC_322: 256649084
+      PumpkinNPC_323: -1231397019
+      PumpkinNPC_324: -1976057526
+      PumpkinNPC_325: 1209647284
+      PumpkinNPC_326: 1750273138
+      PumpkinNPC_327: -364735098
+      PumpkinNPC_328: -289220587
+      PumpkinNPC_329: -1222944753
+      PumpkinNPC_33: -1793749088
+      PumpkinNPC_330: -580077606
+      PumpkinNPC_331: 1098980013
+      PumpkinNPC_332: -430625306
+      PumpkinNPC_333: -2146057975
+      PumpkinNPC_334: 1090610639
+      PumpkinNPC_335: 171001285
+      PumpkinNPC_336: -18520798
+      PumpkinNPC_337: -1504359159
+      PumpkinNPC_338: 1018819449
+      PumpkinNPC_339: -1422305486
+      PumpkinNPC_34: 982478052
+      PumpkinNPC_340: 885366858
+      PumpkinNPC_341: 1724562648
+      PumpkinNPC_342: -1739058823
+      PumpkinNPC_343: -1706248490
+      PumpkinNPC_344: -1199294184
+      PumpkinNPC_345: -1051538541
+      PumpkinNPC_346: 412810031
+      PumpkinNPC_347: -455819617
+      PumpkinNPC_348: -889028844
+      PumpkinNPC_349: 1956554
+      PumpkinNPC_35: 1264615506
+      PumpkinNPC_350: -375124267
+      PumpkinNPC_351: -1166439765
+      PumpkinNPC_352: -1691310385
+      PumpkinNPC_353: -793513054
+      PumpkinNPC_354: 2043569044
+      PumpkinNPC_355: 651328908
+      PumpkinNPC_356: 2108919871
+      PumpkinNPC_357: 1876981782
+      PumpkinNPC_358: -955379922
+      PumpkinNPC_359: -1811449275
+      PumpkinNPC_36: -1343823337
+      PumpkinNPC_360: -143693297
+      PumpkinNPC_361: 1846283089
+      PumpkinNPC_362: -2036154742
+      PumpkinNPC_363: -320238514
+      PumpkinNPC_364: -1996074437
+      PumpkinNPC_365: 1457282792
+      PumpkinNPC_366: 1188550435
+      PumpkinNPC_367: 1665851833
+      PumpkinNPC_368: 630852517
+      PumpkinNPC_369: -548370158
+      PumpkinNPC_37: -731762318
+      PumpkinNPC_370: 188916171
+      PumpkinNPC_371: -1268913945
+      PumpkinNPC_372: -1555310562
+      PumpkinNPC_373: 1233240366
+      PumpkinNPC_374: 351071604
+      PumpkinNPC_375: -1770869188
+      PumpkinNPC_376: 10586048
+      PumpkinNPC_377: -1046111671
+      PumpkinNPC_378: -1637155294
+      PumpkinNPC_379: -1357133781
+      PumpkinNPC_38: 1230588019
+      PumpkinNPC_380: -167207403
+      PumpkinNPC_381: 1109427260
+      PumpkinNPC_382: -866171523
+      PumpkinNPC_383: 625290016
+      PumpkinNPC_384: 1401152850
+      PumpkinNPC_385: -1916118546
+      PumpkinNPC_386: -661628693
+      PumpkinNPC_387: -364305680
+      PumpkinNPC_388: -925467676
+      PumpkinNPC_389: -78124591
+      PumpkinNPC_39: 2143333921
+      PumpkinNPC_390: 2073357928
+      PumpkinNPC_391: -1324856639
+      PumpkinNPC_392: -246844869
+      PumpkinNPC_393: 643342824
+      PumpkinNPC_394: -695901269
+      PumpkinNPC_395: -177019687
+      PumpkinNPC_396: 2078326161
+      PumpkinNPC_397: 2129825705
+      PumpkinNPC_398: -1064068986
+      PumpkinNPC_399: -712889775
+      PumpkinNPC_4: 1348715675
+      PumpkinNPC_40: 979161400
+      PumpkinNPC_400: -1238205932
+      PumpkinNPC_41: -1787399692
+      PumpkinNPC_42: -160264737
+      PumpkinNPC_43: 1675043746
+      PumpkinNPC_44: 212821035
+      PumpkinNPC_45: -592675517
+      PumpkinNPC_46: -701950353
+      PumpkinNPC_47: 1313786431
+      PumpkinNPC_48: -1413158905
+      PumpkinNPC_49: -1511090478
+      PumpkinNPC_5: -1892630
+      PumpkinNPC_50: -439749090
+      PumpkinNPC_51: 1686979586
+      PumpkinNPC_52: 588723185
+      PumpkinNPC_53: -551971506
+      PumpkinNPC_54: 1623359268
+      PumpkinNPC_55: -1596358753
+      PumpkinNPC_56: -130890238
+      PumpkinNPC_57: -825636972
+      PumpkinNPC_58: -690349207
+      PumpkinNPC_59: 1293691420
+      PumpkinNPC_6: 2007010115
+      PumpkinNPC_60: 489786735
+      PumpkinNPC_61: 1322944773
+      PumpkinNPC_62: -2012960679
+      PumpkinNPC_63: -1006285102
+      PumpkinNPC_64: -968635368
+      PumpkinNPC_65: 1434509218
+      PumpkinNPC_66: -562793766
+      PumpkinNPC_67: -1114449512
+      PumpkinNPC_68: 883928351
+      PumpkinNPC_69: -1793876754
+      PumpkinNPC_7: -476857945
+      PumpkinNPC_70: 550916061
+      PumpkinNPC_71: -209887111
+      PumpkinNPC_72: 365279504
+      PumpkinNPC_73: 1653571509
+      PumpkinNPC_74: -97600057
+      PumpkinNPC_75: 368256832
+      PumpkinNPC_76: 1207778740
+      PumpkinNPC_77: 1656447546
+      PumpkinNPC_78: 1485206478
+      PumpkinNPC_79: 251335536
+      PumpkinNPC_8: 1133786969
+      PumpkinNPC_80: -1647131526
+      PumpkinNPC_81: 1243455364
+      PumpkinNPC_82: 6490467
+      PumpkinNPC_83: -1269998694
+      PumpkinNPC_84: 2123366197
+      PumpkinNPC_85: 1568690854
+      PumpkinNPC_86: 1257492274
+      PumpkinNPC_87: -445341648
+      PumpkinNPC_88: -1698999332
+      PumpkinNPC_89: 308606617
+      PumpkinNPC_9: -789505857
+      PumpkinNPC_90: -550762393
+      PumpkinNPC_91: 782116785
+      PumpkinNPC_92: 1108554447
+      PumpkinNPC_93: 897607900
+      PumpkinNPC_94: 965622981
+      PumpkinNPC_95: 1599628385
+      PumpkinNPC_96: 1010486804
+      PumpkinNPC_97: -1064292237
+      PumpkinNPC_98: 1270057295
+      PumpkinNPC_99: 199374363
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
