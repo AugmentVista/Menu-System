@@ -169,7 +169,7 @@ public class Game_Manager : MonoBehaviour
     }
     public static void ChangeCamera() // Swaps between player camera and menu camera when a menu is opened
     {
-        if (menuCamera.gameObject.activeSelf)
+        if (menuCamera.gameObject.activeSelf) 
         {
             menuCamera.gameObject.SetActive(false);
             playerCamera.gameObject.SetActive(true);
