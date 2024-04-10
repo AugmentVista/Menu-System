@@ -11,9 +11,11 @@ public class DependenciesExperiment : ILevelManagerDependencies
     public GameObject PausedUI { get; }
     public GameObject GameOverUI { get; }
     public GameObject GameWinUI { get; }
+    public Camera MenuCamera { get; }
+    public Camera PlayerCamera { get; }
     // Implement other dependencies...
 
-    public DependenciesExperiment(GameObject player, Transform playerTransform, GameObject mainMenuUI, GameObject gamePlayUI, GameObject gamePlay2UI, GameObject optionsUI, GameObject pausedUI, GameObject gameOverUI, GameObject gameWinUI)
+    public DependenciesExperiment(GameObject player, Transform playerTransform, GameObject mainMenuUI, GameObject gamePlayUI, GameObject gamePlay2UI, GameObject optionsUI, GameObject pausedUI, GameObject gameOverUI, GameObject gameWinUI, Camera menuCamera, Camera playerCamera)
     {
         Player = player;
         PlayerTransform = playerTransform;
@@ -24,7 +26,9 @@ public class DependenciesExperiment : ILevelManagerDependencies
         PausedUI = pausedUI;
         GameOverUI = gameOverUI;
         GameWinUI = gameWinUI;
-        // Initialize other dependencies...
+        MenuCamera = menuCamera;
+        PlayerCamera = playerCamera;
+        // Initialize other dependencies when I need them
     }
 }
 public class DependenciesExperimentInitializer : MonoBehaviour
@@ -38,10 +42,12 @@ public class DependenciesExperimentInitializer : MonoBehaviour
     public GameObject pausedUI;
     public GameObject gameOverUI;
     public GameObject gameWinUI;
+    public Camera menuCamera;
+    public Camera playerCamera;
 
     private void Awake()
     {
-        ILevelManagerDependencies dependencies = new DependenciesExperiment(player, playerTransform, mainMenuUI, gamePlayUI, gamePlay2UI, optionsUI, pausedUI, gameOverUI, gameWinUI);
+        ILevelManagerDependencies dependencies = new DependenciesExperiment(player, playerTransform, mainMenuUI, gamePlayUI, gamePlay2UI, optionsUI, pausedUI, gameOverUI, gameWinUI, menuCamera, playerCamera);
         LevelManager levelManager = new LevelManager(dependencies);
     }
 }

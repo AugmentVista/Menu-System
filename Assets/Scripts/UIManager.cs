@@ -9,14 +9,13 @@ public class UIManager : MonoBehaviour
     public GameObject pausedUI;
     public GameObject gameOverUI;
     public GameObject gameWinUI;
-    public GameObject gamePlay2UI;
 
     void Start()
     {
         UpdateUI();
         Game_Manager.OnMainMenu += MainMenuUI;
-        Game_Manager.OnGamePlay1 += GamePlay1UI;
-        Game_Manager.OnGamePlay2 += GamePlay2UI;
+        Game_Manager.OnGamePlay1 += GamePlayUI;
+        Game_Manager.OnGamePlay2 += GamePlayUI; // Keep the same in-game UI between scenes
         Game_Manager.OnGameOver += GameWinUI;
         Game_Manager.OnGameWin += GameWinUI;
         Game_Manager.OnPause += PausedUI;
@@ -25,8 +24,8 @@ public class UIManager : MonoBehaviour
     private void OnDestroy()
     {
         Game_Manager.OnMainMenu -= MainMenuUI;
-        Game_Manager.OnGamePlay1 -= GamePlay1UI;
-        Game_Manager.OnGamePlay1 -= GamePlay2UI;
+        Game_Manager.OnGamePlay1 -= GamePlayUI;
+        Game_Manager.OnGamePlay2 -= GamePlayUI; // Keep the same in-game UI between scenes
         Game_Manager.OnGameOver -= GameWinUI;
         Game_Manager.OnGameWin -= GameWinUI;
         Game_Manager.OnPause -= PausedUI;
@@ -41,10 +40,8 @@ public class UIManager : MonoBehaviour
                 MainMenuUI();
                 break;
             case "Gameplay1":
-                GamePlay1UI();
-                break;
             case "Gameplay2":
-                GamePlay2UI();
+                GamePlayUI();
                 break;
             case "GameWin":
                 GameWinUI();
@@ -62,15 +59,10 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         mainMenuUI.SetActive(true);
     }
-    private void GamePlay1UI()
+    private void GamePlayUI()
     {
         HideAllUI();
         gamePlayUI.SetActive(true);
-    }
-    private void GamePlay2UI()
-    {
-        HideAllUI();
-        gamePlay2UI.SetActive(true);
     }
     public void OptionsUI()
     {
@@ -96,7 +88,6 @@ public class UIManager : MonoBehaviour
     {
         mainMenuUI.SetActive(false);
         gamePlayUI.SetActive(false);
-        gamePlay2UI.SetActive(false);
         optionsUI.SetActive(false);
         pausedUI.SetActive(false);
         gameOverUI.SetActive(false);

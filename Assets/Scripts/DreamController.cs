@@ -56,24 +56,11 @@ public class DreamController : LevelManager
                 break;
         }
     }
-    protected override void SceneCheck()
-    {
-        if (hope > 10000) { SpillOver = true; }
-        Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.buildIndex == 2 && SpillOver)
-        {
-            LoseHope();
-        }
-        if (hope > 19500)
-        SpillOver = false;
-        CheckWinClause();
-    }
 
     private void Update()
     {
         hopeBar.GetComponent<Image>().fillAmount = hope / 20000;
         UpdateHope();
-        SceneCheck();
     }
     public override void CheckWinClause()
     {

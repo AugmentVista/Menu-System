@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public interface ILevelManagerDependencies
 {
     GameObject Player { get; }
@@ -14,26 +12,32 @@ public interface ILevelManagerDependencies
     GameObject PausedUI { get; }
     GameObject GameOverUI { get; }
     GameObject GameWinUI { get; }
+    Camera MenuCamera { get; }
+    Camera PlayerCamera { get; }
 
-    // Add other dependencies as needed...
+    // Add other dependencies as needed
 }
-
 
 public class LevelManager : UIManager
 {
     private readonly ILevelManagerDependencies dependencies;
-
     public LevelManager(ILevelManagerDependencies dependencies)
     {
         this.dependencies = dependencies;
     }
-
     #region InheritedVariables
-    protected GameObject player => dependencies.Player;
-    protected Transform playerTransform => dependencies.PlayerTransform;
+    protected GameObject Player => dependencies.Player;
+    protected Transform PlayerTransform => dependencies.PlayerTransform;
     protected bool Win;
     protected bool Lose;
+    private GameObject PlayerRespawnPoint;
     #endregion
+
+
+    private void Awake()
+    {
+        SceneManager.activeSceneChanged += SceneCheck;
+    }
 
     #region SceneCalls
     public void LoadMainMenu()
@@ -64,6 +68,7 @@ public class LevelManager : UIManager
         {
         }
     }
+
     public virtual void CheckWinClause()
     {
         //if (Win)
@@ -72,17 +77,27 @@ public class LevelManager : UIManager
         //    Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameOver;
         //else return;
     }
-    protected virtual void SceneCheck()
+
+    protected virtual void SceneCheck(Scene scene1, Scene scene2) // Only gets called after scene is fully loaded
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "ExampleScene")
+        switch (currentScene.name)
         {
-            // code for entering that scene here
+            case "GamePlay1":
+                PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
+                PlayerRespawn();
+                Game_Manager.ChangeCamera();
+                break;
+            case "GamePlay2":
+                PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
+                PlayerRespawn();
+                Game_Manager.ChangeCamera();
+                break;
         }
-        else { return; }
     }
-    protected virtual void PlayerToSpawnPoint() 
-    { 
-        player.transform.position = Vector3.zero;
+
+    protected virtual void PlayerRespawn()
+    {
+        Player.transform.position = PlayerRespawnPoint.transform.position;
     }
 }

@@ -6,7 +6,10 @@ public class Game_Manager : MonoBehaviour
 {
     [SerializeField] private UIManager uiManager;
     [SerializeField] private LevelManager levelManager;
-    [SerializeField] private GameObject MenuCamera;
+    public static GameObject playerCamera;
+    public static GameObject menuCamera;
+    public GameObject playerCameraLocal;
+    public GameObject menuCameraLocal;
     [SerializeField] private GameObject Player;
     public bool MenuOpen;
 
@@ -20,6 +23,12 @@ public class Game_Manager : MonoBehaviour
     public static event GameStateChange OnGameOver;
     public static event GameStateChange OnGameWin;
     public static event GameStateChange OnPause;
+
+    private void Start()
+    {
+        playerCamera = playerCameraLocal;
+        menuCamera = menuCameraLocal;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && gameState != GameState.MainMenu)
@@ -120,13 +129,26 @@ public class Game_Manager : MonoBehaviour
         MenuOpen = open;
         if (MenuOpen)
         {
-            MenuCamera.SetActive(true);
+            ChangeCamera();
             Cursor.visible = true;
         }
         else if (!MenuOpen)
         {
-            MenuCamera.SetActive(false);
+            ChangeCamera();
             Cursor.visible = false;
+        }
+    }
+    public static void ChangeCamera()
+    {
+        if (menuCamera.gameObject.activeSelf)
+        {
+            menuCamera.gameObject.SetActive(false);
+            playerCamera.gameObject.SetActive(true);
+        }
+        else if (playerCamera.gameObject.activeSelf)
+        {
+            menuCamera.gameObject.SetActive(true);
+            playerCamera.gameObject.SetActive(false);
         }
     }
     #endregion
@@ -144,7 +166,6 @@ public class Game_Manager : MonoBehaviour
         SceneTransition.LoadGameplay1();
         MenuIs(true);
         OnGamePlay1?.Invoke();
-        
     }
     public void GamePlay2()
     {
