@@ -11,6 +11,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject playerCameraLocal;
     public GameObject menuCameraLocal;
     [SerializeField] private GameObject Player;
+    public GameState tempGameState;
 
     public enum GameState { MainMenu, GamePlay1, GamePlay2, Paused, Options, GameOver, GameWin }
     public GameState gameState;
@@ -34,6 +35,13 @@ public class Game_Manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && (gameState == GameState.GamePlay1 || gameState == GameState.GamePlay2 ))
         {
             PauseTrigger();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Paused)
+        {
+            MenuIs(false);
+            gameState = tempGameState;
+            //ChangeGameState(gameState); this resets the player through scenes.
+            Debug.Log("tempGameState is " + tempGameState);
         }
     }
     public void ChangeGameState(GameState state)
@@ -66,6 +74,16 @@ public class Game_Manager : MonoBehaviour
                 Debug.Log("Game state has defaulted");
                 break;
         }
+        if (gameState == GameState.Paused)
+        {
+            Time.timeScale = 0.01f;
+            Debug.Log("Game State is " + gameState);
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+            Debug.Log("Game State is " + gameState);
+        }
     }
 
     #region Non states
@@ -83,19 +101,11 @@ public class Game_Manager : MonoBehaviour
         ChangeGameState(gameState);
     }
 
-    public void PauseTrigger() 
-    // You cannot pause while in a menu, only if MenuOpen is false does the pause occur.
-    // Changing GameState to paused calls Pause() which sets MenuOpen to true.
+    public void PauseTrigger()
     {
-        if (MenuIs(true))
-        {
-            return;
-        }
-        else
-        {
-            gameState = GameState.Paused;
-            ChangeGameState(gameState);
-        }
+        tempGameState = gameState;
+        gameState = GameState.Paused;
+        ChangeGameState(gameState);
     }
 
     public void OptionsTrigger()
@@ -142,30 +152,30 @@ public class Game_Manager : MonoBehaviour
         Application.Quit();
     }
 
-    public void Resume() // Sets MenuIs to false while there is a menuCamera active meaning there is no playercamera
-    {
-        MenuIs(false);
-    }
-
     private bool MenuIs(bool open)
     // If a menu is open and the menu camera is turned off it is turned on and the player camera is turned off.
     // If a menu isn't open and the player camera is turned off it is turned on and the menu camera is turned off.
     {
-        if (!menuCamera && open)
+        if (!menuCamera.activeSelf && open)
         {
             ChangeCamera();
             Cursor.visible = true;
+            Debug.Log("MenuIs() is working and Menu is " + open);
             return true;
         }
-        if (!playerCamera && !open) 
+        else if (!playerCamera.activeSelf && !open)
         {
             ChangeCamera();
             Cursor.visible = false;
+            Debug.Log("MenuIs() is working and Menu is " + open);
             return false;
         }
-        Debug.Log("MenuIs() is not working");
-        Debug.Log("menuCamera is " + menuCamera.activeSelf + " playerCamera is " + playerCamera.activeSelf );
-        return false;
+        else
+        {
+            Debug.Log("MenuIs() is not working");
+            Debug.Log("menuCamera is " + menuCamera.activeSelf + " playerCamera is " + playerCamera.activeSelf);
+            return false;
+        }
     }
     public static void ChangeCamera() // Swaps between player camera and menu camera when a menu is opened
     {

@@ -54,22 +54,26 @@ public class LevelManager : UIManager
         {
             case "Gameplay1":
                 PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
-                PlayerRespawn();
-                //Game_Manager.ChangeCamera();
+                Game_Manager.menuCamera.gameObject.SetActive(false);
                 break;
             case "Gameplay2":
                 PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
-                PlayerRespawn();
-                //Game_Manager.ChangeCamera();
+                Game_Manager.menuCamera.gameObject.SetActive(false);
                 break;
             default:
                 // The only other scenes that matter are MainMenu, GameWin and GameOver
                 break;
         }
+
+        if (PlayerRespawnPoint)
+            PlayerRespawn();
+        else
+            Debug.Log("There is no Player Spawn Point object in this scene");
     }
 
     public void PlayerRespawn()
     {
+        if (Player != null)
         Player.transform.position = PlayerRespawnPoint.transform.position;
     }
 }

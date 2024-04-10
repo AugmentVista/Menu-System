@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         mainMenuUI.SetActive(true);
     }
-    private void GamePlayUI()
+    public void GamePlayUI()
     {
         HideAllUI();
         gamePlayUI.SetActive(true);
@@ -84,7 +84,7 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         pausedUI.SetActive(true);
     }
-    private void HideAllUI()
+    public void HideAllUI()
     {
         mainMenuUI.SetActive(false);
         gamePlayUI.SetActive(false);
