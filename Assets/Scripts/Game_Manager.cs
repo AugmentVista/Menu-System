@@ -11,7 +11,6 @@ public class Game_Manager : MonoBehaviour
     public GameObject playerCameraLocal;
     public GameObject menuCameraLocal;
     [SerializeField] private GameObject Player;
-    public bool MenuOpen;
 
     public enum GameState { MainMenu, GamePlay1, GamePlay2, Paused, Options, GameOver, GameWin }
     public GameState gameState;
@@ -31,7 +30,8 @@ public class Game_Manager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && gameState != GameState.MainMenu)
+        // The additional () ensures this adheres to PEDMAS. The gameState checks first as either, then ESC pressed is checked.
+        if (Input.GetKeyDown(KeyCode.Escape) && (gameState == GameState.GamePlay1 || gameState == GameState.GamePlay2 ))
         {
             PauseTrigger();
         }
@@ -63,6 +63,7 @@ public class Game_Manager : MonoBehaviour
                 break;
             default:
                 MainMenu();
+                Debug.Log("Game state has defaulted");
                 break;
         }
     }
@@ -75,33 +76,48 @@ public class Game_Manager : MonoBehaviour
         gameState = GameState.MainMenu;
         ChangeGameState(gameState);
     }
+
     public void StartGameTrigger()
     {
         gameState = GameState.GamePlay1;
         ChangeGameState(gameState);
     }
-    public void PauseTrigger()
+
+    public void PauseTrigger() 
+    // You cannot pause while in a menu, only if MenuOpen is false does the pause occur.
+    // Changing GameState to paused calls Pause() which sets MenuOpen to true.
     {
-        gameState = GameState.Paused;
-        ChangeGameState(gameState);
+        if (MenuIs(true))
+        {
+            return;
+        }
+        else
+        {
+            gameState = GameState.Paused;
+            ChangeGameState(gameState);
+        }
     }
+
     public void OptionsTrigger()
     {
         gameState = GameState.Options;
         ChangeGameState(gameState);
     }
+
     public void GameOverTrigger()
     {
         gameState = GameState.GameOver;
         ChangeGameState(gameState);
     }
+
     public void GameWinTrigger()
     {
         gameState = GameState.GameWin;
         ChangeGameState(gameState);
     }
+
     #endregion
-    public void Resume()
+    public void ReloadScene() // Loads selected scene
     {
         Scene currentScene = SceneManager.GetActiveScene();
         switch (currentScene.name)
@@ -120,75 +136,96 @@ public class Game_Manager : MonoBehaviour
                 break;
         }
     }
+
     public void GameQuit()
     {
         Application.Quit();
     }
-    private void MenuIs(bool open)
+
+    public void Resume() // Sets MenuIs to false while there is a menuCamera active meaning there is no playercamera
     {
-        MenuOpen = open;
-        if (MenuOpen)
-        {
-            //ChangeCamera();
-            Cursor.visible = true;
-        }
-        else if (!MenuOpen)
-        {
-            //ChangeCamera();
-            Cursor.visible = false;
-        }
+        MenuIs(false);
     }
-    public static void ChangeCamera()
+
+    private bool MenuIs(bool open)
+    // If a menu is open and the menu camera is turned off it is turned on and the player camera is turned off.
+    // If a menu isn't open and the player camera is turned off it is turned on and the menu camera is turned off.
+    {
+        if (!menuCamera && open)
+        {
+            ChangeCamera();
+            Cursor.visible = true;
+            return true;
+        }
+        if (!playerCamera && !open) 
+        {
+            ChangeCamera();
+            Cursor.visible = false;
+            return false;
+        }
+        Debug.Log("MenuIs() is not working");
+        Debug.Log("menuCamera is " + menuCamera.activeSelf + " playerCamera is " + playerCamera.activeSelf );
+        return false;
+    }
+    public static void ChangeCamera() // Swaps between player camera and menu camera when a menu is opened
     {
         if (menuCamera.gameObject.activeSelf)
         {
             menuCamera.gameObject.SetActive(false);
             playerCamera.gameObject.SetActive(true);
+            return;
         }
         else if (playerCamera.gameObject.activeSelf)
         {
             menuCamera.gameObject.SetActive(true);
             playerCamera.gameObject.SetActive(false);
+            return;
         }
     }
     #endregion
 
     #region States
-    private void MainMenu()
+    #region States that trigger scene transitions
+    private void MainMenu() 
     {
         OnMainMenu?.Invoke();
         SceneTransition.LoadMainMenu();
         MenuIs(true);
     }
-    private void GamePlay1()
+
+    private void GamePlay1() 
     {
-        Player.SetActive(true);
         SceneTransition.LoadGameplay1();
-        MenuIs(true);
+        MenuIs(false);
         OnGamePlay1?.Invoke();
     }
-    public void GamePlay2()
+
+    public void GamePlay2() 
     {
-        Player.SetActive(true);
         SceneTransition.LoadGameplay2();
-        MenuIs(true);
+        MenuIs(false);
         OnGamePlay2?.Invoke();
     }
+    #endregion
+
     private void Pause() 
     {
         OnPause?.Invoke();
         MenuIs(true);
     }
+
     private void Options() 
     {
         uiManager.OptionsUI();
         MenuIs(true);
     }
+
     private void GameOver() 
     {
         OnGameOver?.Invoke();
         MenuIs(true);
     }
+
     private void GameWin() 
     {
         OnGameWin?.Invoke();

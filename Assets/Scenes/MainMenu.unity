@@ -5306,7 +5306,7 @@ GameObject:
   - component: {fileID: 3977105577486001760}
   - component: {fileID: 4672809605332701213}
   m_Layer: 0
-  m_Name: GameManager (With Player)
+  m_Name: GameManager (With Player)8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6133,7 +6133,6 @@ MonoBehaviour:
   playerCameraLocal: {fileID: 2227253489163442840}
   menuCameraLocal: {fileID: 6246924353743866477}
   Player: {fileID: 5524876032608738756}
-  MenuOpen: 0
   gameState: 0
 --- !u!1 &4697617861004146297
 GameObject:
