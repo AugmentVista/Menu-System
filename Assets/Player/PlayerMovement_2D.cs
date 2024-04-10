@@ -68,8 +68,8 @@ public class PlayerMovement_2D : MonoBehaviour
             {
                 Dancing = true;
                 animator.SetBool("Dancing", Dancing);
-                Debug.Log(lastMovementDirection.y.ToString());
-                Debug.Log(lastMovementDirection.x.ToString());
+                //Debug.Log(lastMovementDirection.y.ToString());
+                //Debug.Log(lastMovementDirection.x.ToString());
 
             }
             else if (Time.time - TimeSpentIdle >= IdleThreshold)

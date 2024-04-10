@@ -129,12 +129,12 @@ public class Game_Manager : MonoBehaviour
         MenuOpen = open;
         if (MenuOpen)
         {
-            ChangeCamera();
+            //ChangeCamera();
             Cursor.visible = true;
         }
         else if (!MenuOpen)
         {
-            ChangeCamera();
+            //ChangeCamera();
             Cursor.visible = false;
         }
     }

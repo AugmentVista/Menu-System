@@ -26,7 +26,7 @@ public class LevelManager : UIManager
         this.dependencies = dependencies;
     }
     #region InheritedVariables
-    protected GameObject Player => dependencies.Player;
+    public GameObject Player;
     protected Transform PlayerTransform => dependencies.PlayerTransform;
     protected bool Win;
     protected bool Lose;
@@ -62,13 +62,6 @@ public class LevelManager : UIManager
     }
     #endregion
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-        }
-    }
-
     public virtual void CheckWinClause()
     {
         //if (Win)
@@ -83,15 +76,15 @@ public class LevelManager : UIManager
         Scene currentScene = SceneManager.GetActiveScene();
         switch (currentScene.name)
         {
-            case "GamePlay1":
+            case "Gameplay1":
                 PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
                 PlayerRespawn();
                 Game_Manager.ChangeCamera();
                 break;
-            case "GamePlay2":
+            case "Gameplay2":
                 PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
                 PlayerRespawn();
-                Game_Manager.ChangeCamera();
+                //Game_Manager.ChangeCamera();
                 break;
         }
     }

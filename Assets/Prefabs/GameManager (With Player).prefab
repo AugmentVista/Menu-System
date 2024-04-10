@@ -6622,8 +6622,8 @@ RectTransform:
   - {fileID: 2756316838181821785}
   - {fileID: 5047989595094161905}
   - {fileID: 5235858815094397891}
-  - {fileID: 3721192762110274798}
   - {fileID: 2351688489245740817}
+  - {fileID: 3721192762110274798}
   m_Father: {fileID: 364456741497106652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6959,7 +6959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiManager: {fileID: 8299677790730792107}
   levelManager: {fileID: 5536857048218916007}
-  MenuCamera: {fileID: 3514295279434521653}
+  playerCameraLocal: {fileID: 0}
+  menuCameraLocal: {fileID: 0}
   Player: {fileID: 3087372640169724828}
   MenuOpen: 0
   gameState: 0
@@ -9674,6 +9675,7 @@ MonoBehaviour:
   pausedUI: {fileID: 0}
   gameOverUI: {fileID: 0}
   gameWinUI: {fileID: 0}
+  Player: {fileID: 0}
   healthBar: {fileID: 9190591592859185415}
   healthBarDropdown: {fileID: 1066224879638581332}
 --- !u!1 &8080953008103720420
@@ -10052,12 +10054,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99ccd9ccae7bd94fbd44630aa00e1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuUI: {fileID: 0}
-  gamePlayUI: {fileID: 0}
-  optionsUI: {fileID: 0}
-  pausedUI: {fileID: 0}
-  gameOverUI: {fileID: 0}
-  gameWinUI: {fileID: 0}
+  mainMenuUI: {fileID: 263445751046978366}
+  gamePlayUI: {fileID: 6474933550667991000}
+  optionsUI: {fileID: 3673023468480759547}
+  pausedUI: {fileID: 2829820755582885921}
+  gameOverUI: {fileID: 6675025865435160618}
+  gameWinUI: {fileID: 8353866184713830660}
+  Player: {fileID: 3087372640169724828}
 --- !u!1 &8434312392497860663
 GameObject:
   m_ObjectHideFlags: 0
