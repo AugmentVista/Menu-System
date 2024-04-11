@@ -5,13 +5,13 @@ public static class SceneTransition
     {
         SceneManager.LoadScene("MainMenu");
     }
-    public static void LoadGameplay1()
+    public static void LoadGamePlay1()
     {
-        SceneManager.LoadScene("Gameplay1");
+        SceneManager.LoadScene("GamePlay1");
     }
-    public static void LoadGameplay2()
+    public static void LoadGamePlay2()
     {
-        SceneManager.LoadScene("Gameplay2");
+        SceneManager.LoadScene("GamePlay2");
     }
     public static void LoadGameWin()
     {

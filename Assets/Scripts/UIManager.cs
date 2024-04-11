@@ -18,7 +18,6 @@ public class UIManager : MonoBehaviour
         Game_Manager.OnGamePlay2 += GamePlayUI; // Keep the same in-game UI between scenes
         Game_Manager.OnGameOver += GameWinUI;
         Game_Manager.OnGameWin += GameWinUI;
-        Game_Manager.OnPause += PausedUI;
     }
 
     private void OnDestroy()
@@ -28,7 +27,6 @@ public class UIManager : MonoBehaviour
         Game_Manager.OnGamePlay2 -= GamePlayUI; // Keep the same in-game UI between scenes
         Game_Manager.OnGameOver -= GameWinUI;
         Game_Manager.OnGameWin -= GameWinUI;
-        Game_Manager.OnPause -= PausedUI;
     }
 
     private void UpdateUI()
@@ -39,8 +37,8 @@ public class UIManager : MonoBehaviour
             case "MainMenu":
                 MainMenuUI();
                 break;
-            case "Gameplay1":
-            case "Gameplay2":
+            case "GamePlay1":
+            case "GamePlay2":
                 GamePlayUI();
                 break;
             case "GameWin":
@@ -79,7 +77,7 @@ public class UIManager : MonoBehaviour
         HideAllUI();
         gameOverUI.SetActive(true);
     }
-    private void PausedUI()
+    public void PausedUI()
     {
         HideAllUI();
         pausedUI.SetActive(true);

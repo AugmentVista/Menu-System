@@ -8,11 +8,14 @@ public class LevelManager : UIManager
     public bool Win;
     public bool Lose;
     public GameObject PlayerRespawnPoint;
-
+    static bool isSubscribed;
 
     private void Awake()
     {
-        SceneManager.activeSceneChanged += SceneCheck;
+        if (isSubscribed) return;
+
+        SceneManager.activeSceneChanged += OnSceneChanged;
+        isSubscribed = true;
     }
 
     #region SceneCalls
@@ -20,13 +23,13 @@ public class LevelManager : UIManager
     {
         SceneTransition.LoadMainMenu();
     }
-    public void LoadGameplay1()
+    public void LoadGamePlay1()
     {
-        SceneTransition.LoadGameplay1();
+        SceneTransition.LoadGamePlay1();
     }
-    public void LoadGameplay2()
+    public void LoadGamePlay2()
     {
-        SceneTransition.LoadGameplay2();
+        SceneTransition.LoadGamePlay2();
     }
     public void LoadGameWin()
     {
@@ -40,40 +43,45 @@ public class LevelManager : UIManager
 
     public void CheckWinClause()
     {
-        if (Win)
-            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameWin;
-        else if (Lose)
-            Singleton.instance.GetComponent<Game_Manager>().gameState = Game_Manager.GameState.GameOver;
-        else return;
-    }
-
-    public void SceneCheck(Scene scene1, Scene scene2) // Only gets called after scene is fully loaded
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        switch (currentScene.name)
+        if (Singleton.instance != null)
         {
-            case "Gameplay1":
-                PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
-                Game_Manager.menuCamera.gameObject.SetActive(false);
-                break;
-            case "Gameplay2":
-                PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
-                Game_Manager.menuCamera.gameObject.SetActive(false);
-                break;
-            default:
-                // The only other scenes that matter are MainMenu, GameWin and GameOver
-                break;
+            Game_Manager gameManager = Singleton.instance.GetComponent<Game_Manager>();
+            if (gameManager != null)
+            {
+                if (Win)
+                    gameManager.gameState = Game_Manager.GameState.GameWin;
+                else if (Lose)
+                    gameManager.gameState = Game_Manager.GameState.GameOver;
+            }
+            else
+            {
+                Debug.LogError("Game_Manager component not found on Singleton instance.");
+            }
         }
-
-        if (PlayerRespawnPoint)
-            PlayerRespawn();
         else
-            Debug.Log("There is no Player Spawn Point object in this scene");
+        {
+            Debug.LogError("Singleton instance not found.");
+        }
     }
 
-    public void PlayerRespawn()
+    private void OnSceneChanged(Scene previousScene, Scene newScene)
     {
-        if (Player != null)
-        Player.transform.position = PlayerRespawnPoint.transform.position;
+        PrepareScene(newScene);
+    }
+
+    private void PrepareScene(Scene scene)
+    {
+        if (scene.name == "GamePlay1" || scene.name == "GamePlay2")
+        {
+            SetupGameplayScene();
+        }
+    }
+    private void SetupGameplayScene()
+    {
+        Game_Manager gameManager = Singleton.instance.GetComponent<Game_Manager>();
+        gameManager.Paused = false;
+        PlayerRespawnPoint = GameObject.Find("Player Spawn Point");
+        PlayerTransform.position = PlayerRespawnPoint.transform.position;
+        Game_Manager.ChangeCamera(true);
     }
 }
