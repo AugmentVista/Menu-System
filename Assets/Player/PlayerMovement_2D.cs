@@ -19,8 +19,8 @@ public class PlayerMovement_2D : MonoBehaviour
 
     private Vector2 lastMovementDirection;
     private bool Walking;
-    private bool Running;
     private bool Standing;
+    //private bool Running;
     private bool Dancing;
     private float TimeSpentIdle;
     public float IdleThreshold;
@@ -80,12 +80,18 @@ public class PlayerMovement_2D : MonoBehaviour
         }
     }
 
-    private void AmIMoving()
+    private bool AmIMoving(bool moving)
     {
         if (movementSpeed < 0.01f)
+        {
             Standing = true;
-            return;
-    
+            return false;
+        }
+        else
+        {
+            Standing = false;
+            return true;
+        }
     }
    
 }

@@ -1,31 +1,36 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class InteractionObject : MonoBehaviour
 {
+    private Info info;
+    private DialogueBox dialogueBox;
+    private TMP_Text dialogueTMP;
+    private string dialogueText;
+    private string infoText;
+
+    
+
+    void Start()
+    {
+        info = ReferenceManager.infoDependant;
+        dialogueBox = ReferenceManager.dialogueBoxDependant;
+        dialogueTMP = ReferenceManager.dialogueTextDependant;
+        dialogueText = ReferenceManager.dialogueTextDependant.text;
+        infoText = ReferenceManager.infoTextDependant.text;
+    }
+
     public enum Types
     {
         nothing, pickup, info, dialogue,
     }
     public Types type;
 
-    public string infoText;
-    public TMP_Text DialogueTMP;
-    public string DialogueText;
-    public TMP_Text InfoTMP;
-    public string InfoText;
     public List<string> Dialogue;
     public List<string> SecondDialogue;
     public List<string> ThirdDialogue;
-    Info info;
-    DialogueBox dialogueBox;
-    void Start()
-    {
-        info = FindObjectOfType<Info>();
-        dialogueBox = FindObjectOfType<DialogueBox>();
-    }
+    
     public void Interact()
     {
         switch (type)
@@ -40,7 +45,7 @@ public class InteractionObject : MonoBehaviour
                 Info();
                 break;
             case Types.dialogue:
-                FirstDialogue();
+                // Call to DialogueManager 
                 break;
         }
     }
@@ -59,25 +64,5 @@ public class InteractionObject : MonoBehaviour
         Debug.Log("Info Display");
         info.SetText(infoText);
     }
-    void FirstDialogue()
-    {
-        Debug.Log("Dialogue registering");
-        dialogueBox.FillQueue(Dialogue, this);
-    }
-    public void SecondToFirst()
-    {
-        Dialogue.Clear();
-        foreach (string line in SecondDialogue)
-        {
-            Dialogue.Add(line);
-        }
-    }
-    public void ThirdToFirst()
-    {
-        Dialogue.Clear();
-        foreach (string line in ThirdDialogue)
-        {
-            Dialogue.Add(line);
-        }
-    }
+  
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueBox : MonoBehaviour
 {
     [SerializeField] private TMP_Text screenText;
-    [SerializeField] private Image backgroundPanel;
+    [SerializeField] private Image DialogueBackgroundPanel;
 
     private Queue<string> textQueue = new Queue<string>();
     private InteractionObject currentObject;
@@ -19,12 +19,12 @@ public class DialogueBox : MonoBehaviour
         {
             Debug.LogError("ScreenText component is not assigned.", this);
         }
-        if (backgroundPanel == null)
+        if (DialogueBackgroundPanel == null)
         {
             Debug.LogError("BackgroundPanel component is not assigned.", this);
         }
 
-        backgroundPanel.enabled = false;
+        DialogueBackgroundPanel.enabled = false;
         screenText.enabled = false;
     }
 
@@ -41,20 +41,21 @@ public class DialogueBox : MonoBehaviour
         currentObject = interactionObj;
         textQueue.Clear();
 
-        if (QuestManager.Thing2)
+        if (QuestManager.SecondCondition)
         {
-            currentObject.ThirdToFirst();
+            //currentObject.DialougeManager Second Dialogue
         }
-        else if (QuestManager.Thing3)
+        else if (QuestManager.ThirdCondition)
         {
-            currentObject.SecondToFirst();
+            //currentObject.DialougeManager Third Dialogue
         }
+        //else if (QuestManager.FourthCondition)  currentObject.DialougeManager Fourth Dialogue
 
         foreach (string dialogueItem in dialogue)
         {
             textQueue.Enqueue(dialogueItem);
         }
-        backgroundPanel.enabled = true;
+        DialogueBackgroundPanel.enabled = true;
         QuestManager.isTalking = true;
         NextLine();
     }
@@ -65,7 +66,7 @@ public class DialogueBox : MonoBehaviour
         {
             textQueue.Enqueue(dialogueItem);
         }
-        backgroundPanel.enabled = true;
+        DialogueBackgroundPanel.enabled = true;
         screenText.enabled = true;
         NextLine();
     }
@@ -86,6 +87,6 @@ public class DialogueBox : MonoBehaviour
     {
         screenText.text = "";
         QuestManager.isTalking = false;
-        backgroundPanel.enabled = false;
+        DialogueBackgroundPanel.enabled = false;
     }
 }

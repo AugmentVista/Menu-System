@@ -1,24 +1,16 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Info : MonoBehaviour
 {
     public TMP_Text Speech;
-    public float displayDuration;
-    private float timer;
+    public Image InfoBackgroundPanel;
 
-    void Start()
+    private void Start()
     {
-        TimeTextReset();
-    }
-
-    void Update()
-    {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            TimeTextReset();
-        }
+        Speech = ReferenceManager.infoTextDependant;
+        InfoBackgroundPanel = ReferenceManager.infoBackgroundPanelDependant;
     }
 
     public void SetText(string text)
@@ -26,16 +18,7 @@ public class Info : MonoBehaviour
         if (Speech != null)
         {
             Speech.text = text;
-            timer = displayDuration;
-        }
-    }
-
-    private void TimeTextReset()
-    {
-        timer = 0;
-        if (Speech != null)
-        {
-            Speech.text = "";
+            
         }
     }
 }

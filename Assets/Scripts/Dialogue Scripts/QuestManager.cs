@@ -8,8 +8,8 @@ public class QuestManager : MonoBehaviour
     public TextMeshProUGUI Dialogue;
 
     public static bool isTalking = false;
-    public static bool Thing2 = false;
-    public static bool Thing3 = false;
+    public static bool SecondCondition = false;
+    public static bool ThirdCondition = false;
 
     private void Start()
     {
