@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MiniFantasy Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 57153bc98c84b584394a27c7ed1998ae, type: 3}
+    - {fileID: 2800000, guid: 49ebf7de40457d84495983a6734b2c68, type: 3}
+    - {fileID: 2800000, guid: 162473a0430db7841a72bcd3c2c1ca47, type: 3}
+    - {fileID: 2800000, guid: 1389a4518cee0534ea58db4eb226c532, type: 3}
+    - {fileID: 2800000, guid: 4d58bc12262e76040a130c79a34f82b5, type: 3}
+    - {fileID: 2800000, guid: 4f6dcb3bc012f9c439961cd00a621636, type: 3}
+    - {fileID: 2800000, guid: 96b78cad7bb6ddf4096fc152168d88c0, type: 3}
+    - {fileID: 2800000, guid: 79fdf2a9c1c39174fa3ea59439baf3c9, type: 3}
+    - {fileID: 2800000, guid: b15ebb5139f72be468de6d294b9bb331, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys: []
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: MiniFantasy Atlas
+  m_IsVariant: 0
