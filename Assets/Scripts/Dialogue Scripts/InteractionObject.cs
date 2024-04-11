@@ -7,18 +7,16 @@ public class InteractionObject : MonoBehaviour
     private Info info;
     private DialogueBox dialogueBox;
     private TMP_Text dialogueTMP;
+    private DialogueManager dialogueManager;
     private string dialogueText;
-    private string infoText;
-
-    
-
+    public string infoText;
     void Start()
     {
         info = ReferenceManager.infoDependant;
         dialogueBox = ReferenceManager.dialogueBoxDependant;
         dialogueTMP = ReferenceManager.dialogueTextDependant;
         dialogueText = ReferenceManager.dialogueTextDependant.text;
-        infoText = ReferenceManager.infoTextDependant.text;
+        dialogueManager = ReferenceManager.dialogueManagerDependant;
     }
 
     public enum Types
@@ -45,7 +43,7 @@ public class InteractionObject : MonoBehaviour
                 Info();
                 break;
             case Types.dialogue:
-                // Call to DialogueManager 
+                dialogueManager.StartFirstDialogue(Dialogue);
                 break;
         }
     }
@@ -57,12 +55,10 @@ public class InteractionObject : MonoBehaviour
     {
         Debug.Log("Pickup");
         gameObject.SetActive(false);
-
     }
     void Info()
     {
         Debug.Log("Info Display");
-        info.SetText(infoText);
+        info.ShowInfo(infoText);
     }
-  
 }

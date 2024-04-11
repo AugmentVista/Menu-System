@@ -8,24 +8,25 @@ public class PlayerInteract : MonoBehaviour
     {
         if (!QuestManager.isTalking && Input.GetKeyDown("space"))
         {
-            playerInteract();
+            PlayerInteraction();
         }
     }
+
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer < 15) // change layer to tags
+        if (collision.gameObject.GetComponent<InteractionObject>() == true)
         {
             CurrentObject = collision.gameObject;
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer < 15) // change layer to tags
+        if (collision.gameObject.GetComponent<InteractionObject>() == true)
         {
             CurrentObject = null;
         }
     }
-    public void playerInteract()
+    public void PlayerInteraction()
     {
         if (CurrentObject != null)
             CurrentObject.GetComponent<InteractionObject>().Interact();

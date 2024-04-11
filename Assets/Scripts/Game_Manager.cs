@@ -175,7 +175,7 @@ public class Game_Manager : MonoBehaviour
         }
         else
         {
-            Debug.Log("menuCamera is " + menuCamera.activeSelf + " playerCamera is " + playerCamera.activeSelf);
+            //Debug.Log("menuCamera is " + menuCamera.activeSelf + " playerCamera is " + playerCamera.activeSelf);
             return false;
         }
     }

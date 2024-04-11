@@ -34,9 +34,13 @@ public class ReferenceManager : MonoBehaviour
     public static Image infoBackgroundPanelDependant;
     public static Queue<string> dialogueQueueDependant;
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
     private void Start()
     {
-        // Assign the static fields with the values of the serialized fields
         AssignStaticReferences();
     }
 

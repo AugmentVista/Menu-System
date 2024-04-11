@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     public void StartFirstDialogue(List<string> dialogue)
     {
         dialogueQueue.Clear();
+        QuestManager.isTalking = true;
         foreach (string line in dialogue)
         {
             dialogueQueue.Enqueue(line);
