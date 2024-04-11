@@ -5,7 +5,6 @@ public class DialogueManager : MonoBehaviour
 {
     private Queue<string> dialogueQueue = new Queue<string>();
 
-
     // Start the first dialogue sequence
     public void StartFirstDialogue(List<string> dialogue)
     {
@@ -17,7 +16,7 @@ public class DialogueManager : MonoBehaviour
         // Additional logic to start displaying dialogue, if needed
     }
 
-    // Transition from second or third dialogue to the first dialogue sequence
+    // Transition from another dialogue to the first dialogue sequence
     public void TransitionToFirstDialogue(List<string> newDialogue)
     {
         dialogueQueue.Clear();
@@ -26,5 +25,15 @@ public class DialogueManager : MonoBehaviour
             dialogueQueue.Enqueue(line);
         }
         // Additional logic for transitioning to the first dialogue, if needed
+    }
+
+    // Method to transition dialogue from another list to the first list
+    public void TransitionDialogue(List<string> fromDialogue, List<string> toDialogue)
+    {
+        toDialogue.Clear();
+        foreach (string line in fromDialogue)
+        {
+            toDialogue.Add(line);
+        }
     }
 }

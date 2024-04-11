@@ -11,7 +11,7 @@ public class DialogueBox : MonoBehaviour
     private Queue<string> textQueue = new Queue<string>();
     private InteractionObject currentObject;
 
-    private const KeyCode advanceKey = KeyCode.E; // Define advance key
+    private const KeyCode nextDialogue = KeyCode.E; // "E" moves on to the next dialogue
 
     private void Start()
     {
@@ -25,25 +25,15 @@ public class DialogueBox : MonoBehaviour
         }
 
         backgroundPanel.enabled = false;
+        screenText.enabled = false;
     }
 
     private void Update()
     {
-        if (QuestManager.isTalking && Input.GetKeyDown(advanceKey))
+        if (QuestManager.isTalking && Input.GetKeyDown(nextDialogue))
         {
             NextLine();
         }
-    }
-
-    public void SecondQueue(List<string> secondDialogue)
-    {
-        textQueue.Clear();
-        foreach (string dialogueItem in secondDialogue)
-        {
-            textQueue.Enqueue(dialogueItem);
-        }
-        backgroundPanel.enabled = true;
-        NextLine();
     }
 
     public void FillQueue(List<string> dialogue, InteractionObject interactionObj)
@@ -66,6 +56,17 @@ public class DialogueBox : MonoBehaviour
         }
         backgroundPanel.enabled = true;
         QuestManager.isTalking = true;
+        NextLine();
+    }
+    public void SecondQueue(List<string> secondDialogue)
+    {
+        textQueue.Clear();
+        foreach (string dialogueItem in secondDialogue)
+        {
+            textQueue.Enqueue(dialogueItem);
+        }
+        backgroundPanel.enabled = true;
+        screenText.enabled = true;
         NextLine();
     }
 
