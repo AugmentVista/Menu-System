@@ -8,6 +8,9 @@ TagManager:
   - Eye
   - Obstacle
   - NPC
+  - Boots
+  - Ring
+  - Helmet
   layers:
   - Default
   - TransparentFX

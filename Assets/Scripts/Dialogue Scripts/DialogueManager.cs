@@ -31,15 +31,14 @@ public class DialogueManager : MonoBehaviour
         currentObject = interactionObj;
         textQueue.Clear();
 
-        if (interactionObj.SecondCondition)
+        if (currentObject != null)
         {
-            //currentObject.DialougeManager Second Dialogue
+            if (currentObject.GetComponent<InteractionObject>().SecondCondition == true )
+            { 
+            currentObject.GetComponent<InteractionObject>().HasNewDialogue = true;
+            }
         }
-        else if (interactionObj.ThirdCondition)
-        {
-            //currentObject.DialougeManager Third Dialogue
-        }
-        //else if (QuestManager.FourthCondition)  currentObject.DialougeManager Fourth Dialogue
+        
 
         foreach (string dialogueItem in dialogue)
         {
@@ -79,24 +78,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void SecondQueue(List<string> secondDialogue)
-    { 
-        // Ensures that HasNewDialogue true only the first time per NPC
-        for (int i = 0; i < 1; i++)
-        {
-            currentObject.GetComponent<InteractionObject>().HasNewDialogue = true;
-        }
-
-        textQueue.Clear();
-        foreach (string dialogueItem in secondDialogue)
-        {
-            textQueue.Enqueue(dialogueItem);
-        }
-        DialogueBackgroundPanel.enabled = true;
-        screenText.enabled = true;
-        NextLine();
-    }
-
     private void NextLine()
     {
         if (textQueue.Count > 0)
@@ -124,6 +105,7 @@ public class DialogueManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
         //ClearDialogue();
     }
 }

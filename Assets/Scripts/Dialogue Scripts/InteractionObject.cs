@@ -35,10 +35,9 @@ public class InteractionObject : MonoBehaviour
     public List<string> thirdDialogue;
 
     public Pickups pickupType;
-    public int pickupCount;
     public enum Pickups
     {
-        Coin, Eyes, Boots
+        Ring, Eyes, Boots, Helmet
     }
 
     public void Interact()
@@ -70,12 +69,13 @@ public class InteractionObject : MonoBehaviour
             break;
         }
         if (!HasNewDialogue)
-        questManager.ProgressCheck();
+            questManager.ProgressCheck();
     }
     void Nothing()
     {
         Debug.Log("Empty");
     }
+
     void Pickup()
     {
         Debug.Log("Pickup");
@@ -84,14 +84,17 @@ public class InteractionObject : MonoBehaviour
 
         switch (pickupType)
         {
-            case Pickups.Coin:
-                questManager.coinInventory.Add(pickupType);
+            case Pickups.Ring:
+                questManager.ringInventory.Add(pickupType);
                 break;
             case Pickups.Eyes:
                 questManager.eyesInventory.Add(pickupType);
                 break;
             case Pickups.Boots:
                 questManager.bootsInventory.Add(pickupType);
+                break;
+            case Pickups.Helmet:
+                questManager.helmetInventory.Add(pickupType);
                 break;
             default:
                 break;

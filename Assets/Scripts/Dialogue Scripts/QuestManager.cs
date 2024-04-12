@@ -13,21 +13,37 @@ public class QuestManager : MonoBehaviour
     public static bool isTalking = false;
     public float questsCompleted;
     public float totalQuests = 5;
+
     public GameObject Inventory;
     public GameObject eyesSprite;
-    public TextMeshProUGUI eyesUICount;
+    public GameObject ringSprite;
+    public GameObject bootsSprite;
+    public GameObject helmetSprite;
+
+    public TextMeshProUGUI eyesUICount; 
+    public TextMeshProUGUI ringUICount;
+    public TextMeshProUGUI bootsUICount;
+    public TextMeshProUGUI helemtUICount;
+
+    private int eyeCount;
+    private int ringCount;
+    private int bootsCount;
+    private int helmetCount;
 
     private GameObject[] Obstacles;
     private GameObject[] eyeObjects;
+    private GameObject[] ringObjects;
+    private GameObject[] bootsObjects;
+    private GameObject[] helmetObjects;
     private GameObject[] NPCs;
 
     public List<InteractionObject.Pickups> inventory = new();
 
-    public List<InteractionObject.Pickups> coinInventory = new List<InteractionObject.Pickups>();
     public List<InteractionObject.Pickups> eyesInventory = new List<InteractionObject.Pickups>();
+    public List<InteractionObject.Pickups> ringInventory = new List<InteractionObject.Pickups>();
     public List<InteractionObject.Pickups> bootsInventory = new List<InteractionObject.Pickups>();
+    public List<InteractionObject.Pickups> helmetInventory = new List<InteractionObject.Pickups>();
 
-    private int eyeCount;
 
     private void Awake()
     {
@@ -38,10 +54,8 @@ public class QuestManager : MonoBehaviour
     {
         if (currentScene.name == "GamePlay2" || currentScene.name == "GamePlay1")
         {
-            Debug.Log("eye count: " + eyeCount);
-            Debug.Log("eyes inventory count: " + eyesInventory.Count);
             QuestObstacleHandler();
-           // NPCAdvanceDialogue();
+            NPCAdvanceDialogue();
         }
         else return;
     }
@@ -58,6 +72,19 @@ public class QuestManager : MonoBehaviour
             if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count && questsCompleted < 1)
             {
                 obstacle.SetActive(true);
+                eyesInventory.Clear();
+                questsCompleted++;
+            }
+            else if (obstacle.name == "Second Obstacle" && ringCount == ringInventory.Count && questsCompleted < 2)
+            {
+                obstacle.SetActive(true);
+                ringInventory.Clear();
+                questsCompleted++;
+            }
+            else if (obstacle.name == "Third Obstacle" && bootsCount == bootsInventory.Count && questsCompleted < 3)
+            {
+                obstacle.SetActive(true);
+                bootsInventory.Clear();
                 questsCompleted++;
             }
         }
@@ -70,13 +97,21 @@ public class QuestManager : MonoBehaviour
             {
                 case "First NPC":
                     if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && eyeCount == eyesInventory.Count && questsCompleted < 1)
-                    npc.GetComponent<InteractionObject>().SecondCondition = true;
+                            npc.GetComponent<InteractionObject>().SecondCondition = true;
                     break;
                 case "Second NPC":
-                    npc.GetComponent<InteractionObject>().SecondCondition = true;
-                    break;
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && ringCount == ringInventory.Count && questsCompleted < 2)
+                            npc.GetComponent<InteractionObject>().SecondCondition = true;
+                        break;
                 case "Third NPC":
-                    npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && bootsCount == bootsInventory.Count && questsCompleted < 3)
+                            npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
+                case "Fourth NPC":
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && helmetCount == helmetInventory.Count && questsCompleted < 4)
+                            npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
+                default:
                     break;
             }
         }
@@ -84,10 +119,25 @@ public class QuestManager : MonoBehaviour
 
     public void UpdateItemsUI()
     {
-        if (Inventory != null && eyesInventory.Count >= 1)
+        if (Inventory != null && eyesInventory.Count >= 0)
         {
             eyesSprite.SetActive(true);
             eyesUICount.text = eyesInventory.Count.ToString();
+        }
+        if (Inventory != null && ringInventory.Count >= 0)
+        {
+            ringSprite.SetActive(true);
+            ringUICount.text = ringInventory.Count.ToString();
+        }
+        if (Inventory != null && bootsInventory.Count >= 0)
+        {
+            bootsSprite.SetActive(true);
+            bootsUICount.text = bootsInventory.Count.ToString();
+        }
+        if (Inventory != null && ringInventory.Count >= 0)
+        {
+            ringSprite.SetActive(true);
+            ringUICount.text = ringInventory.Count.ToString();
         }
         else return;
     }
@@ -95,6 +145,8 @@ public class QuestManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log(ringInventory.Count);
+
         inventory = new();
         currentScene = scene;
 
@@ -104,8 +156,19 @@ public class QuestManager : MonoBehaviour
         if (scene.name == "GamePlay2")
         {
             eyesInventory = new();
+            bootsInventory = new();
+            ringInventory = new();
+            helmetInventory = new();
+
             eyeObjects = GameObject.FindGameObjectsWithTag("Eye");
+            bootsObjects = GameObject.FindGameObjectsWithTag("Boots");
+            ringObjects = GameObject.FindGameObjectsWithTag("Ring");
+            helmetObjects = GameObject.FindGameObjectsWithTag("Helmet");
+
             eyeCount = eyeObjects.Length;
+            bootsCount = bootsObjects.Length;
+            ringCount = ringObjects.Length;
+            helmetCount = helmetObjects.Length;
         }
 
         if (scene.name != "GamePlay1" && scene.name != "Gameplay2" && scene.name != "Main Menu")
