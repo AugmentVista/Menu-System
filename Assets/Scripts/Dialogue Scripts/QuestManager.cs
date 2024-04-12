@@ -13,6 +13,9 @@ public class QuestManager : MonoBehaviour
     public static bool isTalking = false;
     public float questsCompleted;
     public float totalQuests = 5;
+    public GameObject Inventory;
+    public GameObject eyesSprite;
+    public TextMeshProUGUI eyesUICount;
 
     private GameObject[] Obstacles;
     private GameObject[] eyeObjects;
@@ -45,10 +48,27 @@ public class QuestManager : MonoBehaviour
                     questsCompleted++;
                 }
             }
+
         }
         else return;
     }
-   
+
+    private void Update()
+    {
+        UpdateItemsUI();
+    }
+
+    public void UpdateItemsUI()
+    {
+        if (Inventory != null && eyesInventory.Count >= 1)
+        {
+            eyesSprite.SetActive(true);
+            eyesUICount.text = eyesInventory.Count.ToString();
+        }
+        else return;
+    }
+
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         inventory = new();
@@ -61,6 +81,11 @@ public class QuestManager : MonoBehaviour
             eyesInventory = new();
             eyeObjects = GameObject.FindGameObjectsWithTag("Eye");
             eyeCount = eyeObjects.Length;
+        }
+
+        if (scene.name != "GamePlay1" && scene.name != "Gameplay2" && scene.name != "Main Menu")
+        {
+            questsCompleted = 0;
         }
 
         if (Obstacles != null)
