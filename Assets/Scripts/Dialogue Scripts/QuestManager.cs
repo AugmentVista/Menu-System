@@ -3,17 +3,19 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
 public class QuestManager : MonoBehaviour
 {
     public GameObject DialogueParent;
     public Image DialogueBackground;
     public TextMeshProUGUI Dialogue;
-    private GameObject[] Obstacles;
-    private GameObject[] eyeObjects;
     Scene currentScene;
     public static bool isTalking = false;
+    public float questsCompleted;
+    public float totalQuests = 5;
+
+    private GameObject[] Obstacles;
+    private GameObject[] eyeObjects;
 
     public List<InteractionObject.Pickups> inventory = new();
 
@@ -21,7 +23,7 @@ public class QuestManager : MonoBehaviour
     public List<InteractionObject.Pickups> eyesInventory = new List<InteractionObject.Pickups>();
     public List<InteractionObject.Pickups> bootsInventory = new List<InteractionObject.Pickups>();
 
-    public int eyeCount;
+    private int eyeCount;
 
     private void Awake()
     {
@@ -37,15 +39,16 @@ public class QuestManager : MonoBehaviour
             foreach (GameObject obstacle in Obstacles)
             {
                 Debug.Log(obstacle.name);
-                if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count)
+                if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count && questsCompleted < 1)
                 {
                     obstacle.SetActive(true);
+                    questsCompleted++;
                 }
             }
         }
         else return;
     }
-
+   
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         inventory = new();
