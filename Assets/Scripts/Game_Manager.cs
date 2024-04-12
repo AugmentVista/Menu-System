@@ -173,11 +173,7 @@ public class Game_Manager : MonoBehaviour
             ChangeCamera();
             return false;
         }
-        else
-        {
-            //Debug.Log("menuCamera is " + menuCamera.activeSelf + " playerCamera is " + playerCamera.activeSelf);
-            return false;
-        }
+        else return false;
     }
     // Swaps between player camera and menu camera when a menu is opened
     public static void ChangeCamera(bool forceGameplayCam = false) 

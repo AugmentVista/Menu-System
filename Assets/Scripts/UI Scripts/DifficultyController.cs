@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
+using System.Collections;
 
 public class DifficultyController : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class DifficultyController : MonoBehaviour
     public GameObject DifficultyBar;
     public GameObject GamerDifficultyBar;
     public TMP_Dropdown DifficultyBarDropdown;
+    public Timer FinalCountDown;
+    private bool isCountdownReducing = false;
+
     public void DifficultyUpdate()
     {
         switch (Difficulty) 
@@ -32,27 +37,6 @@ public class DifficultyController : MonoBehaviour
                 break;
         }
     }
-    public void DifficultyDropdown()
-    {
-        switch (DifficultyBarDropdown.value)
-        {
-            case 0:
-                Difficulty = 20;
-                break;
-            case 1:
-                Difficulty = 40;
-                break;
-            case 2:
-                Difficulty = 60;
-                break;
-            case 3:
-                Difficulty = 80;
-                break;
-            case 4:
-                Difficulty = 100;
-                break;
-        }
-    }
     private void Update()
     {
         DifficultyBar.GetComponent<Image>().fillAmount = Difficulty / 100;
@@ -61,6 +45,10 @@ public class DifficultyController : MonoBehaviour
             GamerDifficultyBar.GetComponent<Image>().fillAmount = GamerAmount / 20;
             GamerAmount = Difficulty - 80;
             GamerAmount = Mathf.Clamp(GamerAmount, 0f, 20.0f);
+        }
+        if (GamerAmount > 0.1f && !isCountdownReducing && FinalCountDown != null)
+        {
+            StartCoroutine(ReduceCountdown());
         }
         DifficultyUpdate();
     }
@@ -73,6 +61,28 @@ public class DifficultyController : MonoBehaviour
             GamerAmount += amount * 5;
         }
     }
+
+    private IEnumerator ReduceCountdown()
+    {
+        isCountdownReducing = true;
+
+        // Calculate the amount to subtract from the timer (up to 20 seconds)
+        float countdownReduction = Mathf.Min(GamerAmount, 20f);
+
+        // Wait for a short delay before starting the countdown reduction
+        yield return new WaitForSeconds(1f);
+
+        // Subtract the calculated amount from the timer every second
+        while (countdownReduction > 0 && FinalCountDown != null)
+        {
+            //FinalCountDown.ChangeTime(-1f); ChangeTime doesn't exist find another solution
+            countdownReduction -= 1f;
+            yield return new WaitForSeconds(1f);
+        }
+
+        isCountdownReducing = false;
+    }
+
     public void ChangeDifficultydown(float amount)
     {
         Difficulty -= amount;

@@ -13,5 +13,6 @@ public class MusicController : MonoBehaviour
     {
         float musicSliderValue = musicSlider.value / 100f;
         musicBar.fillAmount = musicSliderValue;
+        //audioSource.volume = musicSliderValue;
     }
 }

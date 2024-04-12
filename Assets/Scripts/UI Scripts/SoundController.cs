@@ -13,6 +13,7 @@ public class SoundController : MonoBehaviour
     {
         float soundSliderValue = soundSlider.value / 100f;
         soundBar.fillAmount = soundSliderValue;
+        //audioSource.volume = soundSliderValue; 
     }
 }
 

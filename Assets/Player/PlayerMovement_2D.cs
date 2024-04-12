@@ -33,6 +33,14 @@ public class PlayerMovement_2D : MonoBehaviour
 
     private void Update()
     {
+        if (ReferenceManager.dialogueManagerDependant.isInDialogue)
+        {
+            movementSpeed = 0;
+            UpdateAnimator();
+            rb.Sleep();
+            return;
+        }
+
         movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
         movementDirection.Normalize();
@@ -80,7 +88,7 @@ public class PlayerMovement_2D : MonoBehaviour
         }
     }
 
-    private bool AmIMoving(bool moving)
+    private bool AmIMoving()
     {
         if (movementSpeed < 0.01f)
         {
@@ -93,5 +101,4 @@ public class PlayerMovement_2D : MonoBehaviour
             return true;
         }
     }
-   
 }

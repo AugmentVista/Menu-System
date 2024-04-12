@@ -8,12 +8,8 @@ public class Info : MonoBehaviour
     public TMP_Text Speech;
     public Image InfoBackgroundPanel;
 
-    // new code from rowan
-    // how long should info stay on screen for? assign in inspector
     [SerializeField] float timerMax;
-    // this variable counts up and tracks when the info box should disappear
     float timer = 0;
-    // this boolean tracks whether or not the info box is on the screen
     bool infoActive = false;
 
     private void Awake()
@@ -26,11 +22,9 @@ public class Info : MonoBehaviour
         Speech = ReferenceManager.infoTextDependant;
         InfoBackgroundPanel = ReferenceManager.infoBackgroundPanelDependant;
     }
-
-    // new code from rowan
     private void Update()
     {
-        // this code handles hiding the info box after the timer runs out
+        // Handles hiding the info box once the timer runs out
         if (infoActive)
         {
             timer += Time.deltaTime;
@@ -46,7 +40,6 @@ public class Info : MonoBehaviour
 
     public void HideInfo()
     {
-        // new code from rowan
         InfoBackgroundPanel.enabled = false;
         Speech.enabled = false;
         infoActive = false;
@@ -55,7 +48,6 @@ public class Info : MonoBehaviour
     public void ShowInfo(string text)
     {
         if (Speech == null) return;
-        Debug.Log(text);
         InfoBackgroundPanel.enabled = true;
         Speech.enabled = true;
         Speech.text = text;

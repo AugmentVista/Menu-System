@@ -1,37 +1,114 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    private Queue<string> dialogueQueue = new Queue<string>();
+    [SerializeField] private TMP_Text screenText;
+    [SerializeField] private Image DialogueBackgroundPanel;
 
-    public void StartFirstDialogue(List<string> dialogue)
+    private Queue<string> textQueue = new Queue<string>();
+    private InteractionObject currentObject;
+
+    private const KeyCode nextDialogue = KeyCode.E; // "E" moves on to the next dialogue
+
+    public bool isInDialogue;
+
+    public void Startdialogue(List<string> dialogue, InteractionObject interactionObj)
     {
-        dialogueQueue.Clear();
+        isInDialogue = true;
+        FillQueue(dialogue, interactionObj);
+    }
+
+    public void FillQueue(List<string> dialogue, InteractionObject interactionObj)
+    {
+        currentObject = interactionObj;
+        textQueue.Clear();
+
+        if (interactionObj.SecondCondition)
+        {
+            //currentObject.DialougeManager Second Dialogue
+        }
+        else if (interactionObj.ThirdCondition)
+        {
+            //currentObject.DialougeManager Third Dialogue
+        }
+        //else if (QuestManager.FourthCondition)  currentObject.DialougeManager Fourth Dialogue
+
+        foreach (string dialogueItem in dialogue)
+        {
+            textQueue.Enqueue(dialogueItem);
+        }
+        DialogueBackgroundPanel.enabled = true;
+        screenText.enabled = true;
         QuestManager.isTalking = true;
-        foreach (string line in dialogue)
+        NextLine();
+    }
+
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void Start()
+    {
+        if (screenText == null)
         {
-            dialogueQueue.Enqueue(line);
+            Debug.LogError("ScreenText component is not assigned.", this);
+        }
+        if (DialogueBackgroundPanel == null)
+        {
+            Debug.LogError("BackgroundPanel component is not assigned.", this);
+        }
+
+        DialogueBackgroundPanel.enabled = false;
+        screenText.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (QuestManager.isTalking && Input.GetKeyDown(nextDialogue))
+        {
+            NextLine();
         }
     }
 
-    // Transition from another dialogue to the first dialogue sequence
-    public void TransitionToFirstDialogue(List<string> newDialogue)
+    public void SecondQueue(List<string> secondDialogue)
     {
-        dialogueQueue.Clear();
-        foreach (string line in newDialogue)
+        textQueue.Clear();
+        foreach (string dialogueItem in secondDialogue)
         {
-            dialogueQueue.Enqueue(line);
+            textQueue.Enqueue(dialogueItem);
         }
-        // Additional logic for transitioning to the first dialogue, if needed
+        DialogueBackgroundPanel.enabled = true;
+        screenText.enabled = true;
+        NextLine();
     }
 
-    public void TransitionDialogue(List<string> fromDialogue, List<string> toDialogue)
+    private void NextLine()
     {
-        toDialogue.Clear();
-        foreach (string line in fromDialogue)
+        if (textQueue.Count > 0)
         {
-            toDialogue.Add(line);
+            screenText.text = textQueue.Dequeue();
         }
+        else if (textQueue.Count == 0)
+        {
+            ClearDialogue();
+        }
+    }
+
+    private void ClearDialogue()
+    {
+        screenText.text = "";
+        QuestManager.isTalking = false;
+        DialogueBackgroundPanel.enabled = false;
+        isInDialogue = false;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ClearDialogue();
     }
 }

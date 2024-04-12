@@ -10,7 +10,6 @@ public class ReferenceManager : MonoBehaviour
     private List<GameObject> dependentObjects = new List<GameObject>();
 
     [SerializeField] private DialogueManager dialogueManager;
-    [SerializeField] private DialogueBox dialogueBox;
     [SerializeField] private QuestManager questManager;
     [SerializeField] private Info info;
     [SerializeField] private GameObject player;
@@ -23,7 +22,6 @@ public class ReferenceManager : MonoBehaviour
 
     // Static fields to hold references to the dependencies
     public static DialogueManager dialogueManagerDependant;
-    public static DialogueBox dialogueBoxDependant;
     public static QuestManager questManagerDependant;
     public static Info infoDependant;
     public static GameObject playerDependant;
@@ -47,7 +45,6 @@ public class ReferenceManager : MonoBehaviour
     private void AssignStaticReferences()
     {
         dialogueManagerDependant = dialogueManager;
-        dialogueBoxDependant = dialogueBox;
         questManagerDependant = questManager;
         infoDependant = info;
         playerDependant = player;
@@ -80,8 +77,6 @@ public class ReferenceManager : MonoBehaviour
     {
         if (mode == LoadSceneMode.Single)
         {
-            //DestroyObjects();
-            //InitializeScene();
         }
     }
 }

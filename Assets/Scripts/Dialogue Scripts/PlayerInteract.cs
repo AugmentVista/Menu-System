@@ -28,6 +28,7 @@ public class PlayerInteract : MonoBehaviour
     }
     public void PlayerInteraction()
     {
+        //Debug.Log(CurrentObject.name);
         if (CurrentObject != null)
             CurrentObject.GetComponent<InteractionObject>().Interact();
     }
