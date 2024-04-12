@@ -12,6 +12,12 @@ public class Game_Manager : MonoBehaviour
     public GameObject menuCameraLocal;
     [SerializeField] private GameObject Player;
     public bool Paused;
+    public GameObject ShowControls;
+    public GameObject ShowPauseControls;
+    private bool controlsActive = false;
+    private bool pauseControlsActive = false;
+    public GameObject Inventory;
+    private bool inventoryActive;
 
     public enum GameState { MainMenu, GamePlay1, GamePlay2, Options, GameOver, GameWin }
     public GameState gameState;
@@ -108,6 +114,21 @@ public class Game_Manager : MonoBehaviour
     {
         gameState = GameState.Options;
         ChangeGameState(gameState);
+    }
+
+    public void ShowInventoryTrigger()
+    {
+        inventoryActive = !inventoryActive;
+        Inventory.SetActive(inventoryActive);
+    }
+
+    public void ShowControlsTrigger()
+    {
+        controlsActive = !controlsActive;
+        ShowControls.SetActive(controlsActive);
+
+        pauseControlsActive = !pauseControlsActive;
+        ShowPauseControls.SetActive(pauseControlsActive);
     }
 
     public void GameOverTrigger()
