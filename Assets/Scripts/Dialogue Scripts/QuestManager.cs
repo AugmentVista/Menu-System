@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
+    Scene currentScene;
     public GameObject DialogueParent;
     public Image DialogueBackground;
     public TextMeshProUGUI Dialogue;
-    Scene currentScene;
     public static bool isTalking = false;
     public float questsCompleted;
     public float totalQuests = 5;
@@ -19,6 +19,7 @@ public class QuestManager : MonoBehaviour
 
     private GameObject[] Obstacles;
     private GameObject[] eyeObjects;
+    private GameObject[] NPCs;
 
     public List<InteractionObject.Pickups> inventory = new();
 
@@ -39,16 +40,8 @@ public class QuestManager : MonoBehaviour
         {
             Debug.Log("eye count: " + eyeCount);
             Debug.Log("eyes inventory count: " + eyesInventory.Count);
-            foreach (GameObject obstacle in Obstacles)
-            {
-                Debug.Log(obstacle.name);
-                if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count && questsCompleted < 1)
-                {
-                    obstacle.SetActive(true);
-                    questsCompleted++;
-                }
-            }
-
+            QuestObstacleHandler();
+           // NPCAdvanceDialogue();
         }
         else return;
     }
@@ -56,6 +49,37 @@ public class QuestManager : MonoBehaviour
     private void Update()
     {
         UpdateItemsUI();
+    }
+    private void QuestObstacleHandler()
+    {
+        foreach (GameObject obstacle in Obstacles)
+        {
+        Debug.Log(obstacle.name);
+            if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count && questsCompleted < 1)
+            {
+                obstacle.SetActive(true);
+                questsCompleted++;
+            }
+        }
+    }
+    public void NPCAdvanceDialogue()
+    {
+        foreach (GameObject npc in NPCs)
+        {
+            switch (npc.name)
+            {
+                case "First NPC":
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && eyeCount == eyesInventory.Count && questsCompleted < 1)
+                    npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
+                case "Second NPC":
+                    npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
+                case "Third NPC":
+                    npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
+            }
+        }
     }
 
     public void UpdateItemsUI()
@@ -75,6 +99,7 @@ public class QuestManager : MonoBehaviour
         currentScene = scene;
 
         Obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+        NPCs = GameObject.FindGameObjectsWithTag("NPC");
 
         if (scene.name == "GamePlay2")
         {

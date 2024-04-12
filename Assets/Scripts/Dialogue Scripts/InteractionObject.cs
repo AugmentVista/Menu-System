@@ -1,21 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class InteractionObject : MonoBehaviour
 {
     private Info info;
-    private TMP_Text dialogueTMP;
     private DialogueManager dialogueManager;
+    private QuestManager questManager;
+    private TMP_Text dialogueTMP;
     private string dialogueText;
     public string infoText;
-    private QuestManager questManager;
-    [SerializeField] private SpriteRenderer renderer; // pickup only
-    [SerializeField] private BoxCollider2D collider; // pickup only
 
     public bool SecondCondition = false;
     public bool ThirdCondition = false;
+    public bool HasNewDialogue = true;
 
     void Start()
     {
@@ -71,6 +69,7 @@ public class InteractionObject : MonoBehaviour
             }
             break;
         }
+        if (!HasNewDialogue)
         questManager.ProgressCheck();
     }
     void Nothing()
@@ -97,7 +96,6 @@ public class InteractionObject : MonoBehaviour
             default:
                 break;
         }
-
         gameObject.SetActive(false);
     }
     void Info()

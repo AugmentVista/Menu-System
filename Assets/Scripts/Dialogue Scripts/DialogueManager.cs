@@ -18,6 +18,10 @@ public class DialogueManager : MonoBehaviour
 
     public void Startdialogue(List<string> dialogue, InteractionObject interactionObj)
     {
+        if (DialogueBackgroundPanel == null)
+        {
+            DialogueBackgroundPanel = ReferenceManager.dialogueBackgroundPanelDependant;
+        }
         isInDialogue = true;
         FillQueue(dialogue, interactionObj);
     }
@@ -76,7 +80,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void SecondQueue(List<string> secondDialogue)
-    {
+    { 
+        // Ensures that HasNewDialogue true only the first time per NPC
+        for (int i = 0; i < 1; i++)
+        {
+            currentObject.GetComponent<InteractionObject>().HasNewDialogue = true;
+        }
+
         textQueue.Clear();
         foreach (string dialogueItem in secondDialogue)
         {
@@ -103,12 +113,17 @@ public class DialogueManager : MonoBehaviour
     {
         screenText.text = "";
         QuestManager.isTalking = false;
+        if (DialogueBackgroundPanel == null)
+        {
+            DialogueBackgroundPanel = ReferenceManager.dialogueBackgroundPanelDependant;
+        }
         DialogueBackgroundPanel.enabled = false;
         isInDialogue = false;
+        currentObject.GetComponent<InteractionObject>().HasNewDialogue = false;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        ClearDialogue();
+        //ClearDialogue();
     }
 }
