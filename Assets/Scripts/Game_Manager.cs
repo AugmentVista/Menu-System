@@ -47,7 +47,6 @@ public class Game_Manager : MonoBehaviour
                 ResumeGame();
             }
         }
-        CursorToggle();
     }
     public void ChangeGameState(GameState state)
     {
@@ -168,17 +167,17 @@ public class Game_Manager : MonoBehaviour
     {
         Application.Quit();
     }
-    private void CursorToggle()
-    {
-        if (playerCamera.activeSelf)
-        {
-            Cursor.visible = false;
-        }
-        else if (menuCamera.activeSelf)
-        {
-            Cursor.visible = true;
-        }
-    }
+    //private void CursorToggle()
+    //{
+    //    if (playerCamera.activeSelf)
+    //    {
+    //        Cursor.visible = false;
+    //    }
+    //    else if (menuCamera.activeSelf)
+    //    {
+    //        Cursor.visible = true;
+    //    }
+    //}
 
     private bool MenuIs(bool open)
     // If a menu is open and the menu camera is turned off it is turned on and the player camera is turned off.
