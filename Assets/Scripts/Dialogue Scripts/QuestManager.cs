@@ -19,11 +19,12 @@ public class QuestManager : MonoBehaviour
     public GameObject ringSprite;
     public GameObject bootsSprite;
     public GameObject helmetSprite;
+    public GameObject Water;
 
     public TextMeshProUGUI eyesUICount; 
     public TextMeshProUGUI ringUICount;
     public TextMeshProUGUI bootsUICount;
-    public TextMeshProUGUI helemtUICount;
+    public TextMeshProUGUI helmetUICount;
 
     private int eyeCount;
     private int ringCount;
@@ -55,7 +56,6 @@ public class QuestManager : MonoBehaviour
         if (currentScene.name == "GamePlay2" || currentScene.name == "GamePlay1")
         {
             QuestObstacleHandler();
-            NPCAdvanceDialogue();
         }
         else return;
     }
@@ -68,24 +68,40 @@ public class QuestManager : MonoBehaviour
     {
         foreach (GameObject obstacle in Obstacles)
         {
-        Debug.Log(obstacle.name);
-            if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count && questsCompleted < 1)
+            Debug.Log(bootsCount);
+            Debug.Log(bootsInventory.Count);
+            if (obstacle.name == "First Obstacle" && eyeCount == eyesInventory.Count )
             {
                 obstacle.SetActive(true);
+                questsCompleted++;
+                NPCAdvanceDialogue();
                 eyesInventory.Clear();
-                questsCompleted++;
             }
-            else if (obstacle.name == "Second Obstacle" && ringCount == ringInventory.Count && questsCompleted < 2)
+            else if (obstacle.name == "Second Obstacle" && bootsCount == bootsInventory.Count )
             {
-                obstacle.SetActive(true);
-                ringInventory.Clear();
+                obstacle.SetActive(false);
                 questsCompleted++;
-            }
-            else if (obstacle.name == "Third Obstacle" && bootsCount == bootsInventory.Count && questsCompleted < 3)
-            {
-                obstacle.SetActive(true);
+                NPCAdvanceDialogue();
                 bootsInventory.Clear();
+            }
+            else if (obstacle.name == "Third Obstacle" && ringCount == ringInventory.Count )
+            {
+                obstacle.SetActive(true);
                 questsCompleted++;
+                NPCAdvanceDialogue();
+                ringInventory.Clear();
+            }
+            else if (obstacle.name == "Fourth Obstacle" && helmetCount == helmetInventory.Count)
+            {
+                obstacle.SetActive(true);
+                questsCompleted++;
+                NPCAdvanceDialogue();
+                helmetInventory.Clear();
+            }
+            else if (obstacle.name == "Fourth Obstacle" && !Water.activeSelf && obstacle.activeSelf)
+            {
+                questsCompleted++;
+                NPCAdvanceDialogue();
             }
         }
     }
@@ -96,20 +112,29 @@ public class QuestManager : MonoBehaviour
             switch (npc.name)
             {
                 case "First NPC":
-                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && eyeCount == eyesInventory.Count && questsCompleted < 1)
-                            npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue == false && eyeCount == eyesInventory.Count )
+                        npc.GetComponent<InteractionObject>().SecondCondition = true;
                     break;
                 case "Second NPC":
-                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && ringCount == ringInventory.Count && questsCompleted < 2)
-                            npc.GetComponent<InteractionObject>().SecondCondition = true;
-                        break;
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue == false && bootsCount == bootsInventory.Count )
+                        npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
                 case "Third NPC":
-                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && bootsCount == bootsInventory.Count && questsCompleted < 3)
-                            npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue == false && ringCount == ringInventory.Count )
+                        npc.GetComponent<InteractionObject>().SecondCondition = true;
                     break;
                 case "Fourth NPC":
-                    if (npc.GetComponent<InteractionObject>().HasNewDialogue = false && helmetCount == helmetInventory.Count && questsCompleted < 4)
-                            npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    if (npc.GetComponent<InteractionObject>().HasNewDialogue == false && helmetCount == helmetInventory.Count )
+                        npc.GetComponent<InteractionObject>().SecondCondition = true;
+                    break;
+                case "Fifth NPC":
+                    Debug.Log(Water.activeSelf);
+                    if (!Water.activeSelf)
+                    {
+                        npc.GetComponent<InteractionObject>().SecondCondition = true && !Water.activeSelf;
+                        npc.GetComponent<BoxCollider2D>().enabled = false;
+                        npc.GetComponent<InteractionObject>().isFading = true;
+                    }
                     break;
                 default:
                     break;
@@ -124,28 +149,31 @@ public class QuestManager : MonoBehaviour
             eyesSprite.SetActive(true);
             eyesUICount.text = eyesInventory.Count.ToString();
         }
+
         if (Inventory != null && ringInventory.Count >= 0)
         {
             ringSprite.SetActive(true);
             ringUICount.text = ringInventory.Count.ToString();
         }
+
         if (Inventory != null && bootsInventory.Count >= 0)
         {
             bootsSprite.SetActive(true);
             bootsUICount.text = bootsInventory.Count.ToString();
         }
-        if (Inventory != null && ringInventory.Count >= 0)
+
+        if (Inventory != null && helmetInventory.Count >= 0)
         {
-            ringSprite.SetActive(true);
-            ringUICount.text = ringInventory.Count.ToString();
+            helmetSprite.SetActive(true);
+            helmetUICount.text = helmetInventory.Count.ToString();
         }
+
         else return;
     }
 
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log(ringInventory.Count);
 
         inventory = new();
         currentScene = scene;
@@ -153,13 +181,14 @@ public class QuestManager : MonoBehaviour
         Obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
         NPCs = GameObject.FindGameObjectsWithTag("NPC");
 
+        eyesInventory = new();
+        bootsInventory = new();
+        ringInventory = new();
+        helmetInventory = new();
+
         if (scene.name == "GamePlay2")
         {
-            eyesInventory = new();
-            bootsInventory = new();
-            ringInventory = new();
-            helmetInventory = new();
-
+            Water = GameObject.FindWithTag("Water");
             eyeObjects = GameObject.FindGameObjectsWithTag("Eye");
             bootsObjects = GameObject.FindGameObjectsWithTag("Boots");
             ringObjects = GameObject.FindGameObjectsWithTag("Ring");
@@ -180,7 +209,7 @@ public class QuestManager : MonoBehaviour
         {
             foreach (GameObject obstacle in Obstacles)
             {
-                if (obstacle.name == "First Obstacle")
+                if (obstacle.name == "First Obstacle" || obstacle.name == "Third Obstacle" || obstacle.name == "Fourth Obstacle")
                     obstacle.SetActive(false);
             }
         }

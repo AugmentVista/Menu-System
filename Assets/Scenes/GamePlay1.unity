@@ -4001,6 +4001,8 @@ MonoBehaviour:
   SecondCondition: 0
   ThirdCondition: 0
   HasNewDialogue: 1
+  isFading: 0
+  fadeTime: 0
   type: 3
   firstDialogue:
   - Legend Says that there is a hidden island beyond this land
@@ -4100,6 +4102,8 @@ MonoBehaviour:
   SecondCondition: 0
   ThirdCondition: 0
   HasNewDialogue: 1
+  isFading: 0
+  fadeTime: 0
   type: 2
   firstDialogue:
   - 
@@ -112447,6 +112451,8 @@ MonoBehaviour:
   SecondCondition: 0
   ThirdCondition: 0
   HasNewDialogue: 1
+  isFading: 0
+  fadeTime: 0
   type: 1
   firstDialogue: []
   secondDialogue: []
@@ -127519,6 +127525,8 @@ MonoBehaviour:
   SecondCondition: 0
   ThirdCondition: 0
   HasNewDialogue: 1
+  isFading: 0
+  fadeTime: 0
   type: 1
   firstDialogue: []
   secondDialogue: []
@@ -127708,6 +127716,8 @@ MonoBehaviour:
   SecondCondition: 0
   ThirdCondition: 0
   HasNewDialogue: 1
+  isFading: 0
+  fadeTime: 0
   type: 1
   firstDialogue: []
   secondDialogue: []
@@ -132289,6 +132299,8 @@ MonoBehaviour:
   SecondCondition: 0
   ThirdCondition: 0
   HasNewDialogue: 1
+  isFading: 0
+  fadeTime: 0
   type: 2
   firstDialogue:
   - 

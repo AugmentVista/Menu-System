@@ -15,6 +15,10 @@ public class InteractionObject : MonoBehaviour
     public bool ThirdCondition = false;
     public bool HasNewDialogue = true;
 
+    public bool isFading = false;
+    float fadeTimer; // incremented timer float
+    public float fadeTime; // time it takes for the object to fully fade away
+
     void Start()
     {
         info = ReferenceManager.infoDependant;
@@ -24,9 +28,20 @@ public class InteractionObject : MonoBehaviour
         questManager = Singleton.instance.GetComponentInChildren<QuestManager>();
     }
 
+    private void Update()
+    {
+        if (isFading)
+        {
+            fadeTimer -= Time.deltaTime;
+            GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, Time.deltaTime);
+            if (fadeTimer <= fadeTime)
+                isFading = false;
+        }
+    }
+
     public enum Types
     {
-        nothing, pickup, info, dialogue,
+        nothing, pickup, info, dialogue, water
     }
     public Types type;
 
@@ -37,7 +52,7 @@ public class InteractionObject : MonoBehaviour
     public Pickups pickupType;
     public enum Pickups
     {
-        Ring, Eyes, Boots, Helmet
+        Ring, Eyes, Boots, Helmet, Water
     }
 
     public void Interact()
@@ -78,24 +93,26 @@ public class InteractionObject : MonoBehaviour
 
     void Pickup()
     {
-        Debug.Log("Pickup");
         questManager.inventory.Add(pickupType);
-        Debug.Log(questManager.inventory.Count);
 
         switch (pickupType)
         {
             case Pickups.Ring:
                 questManager.ringInventory.Add(pickupType);
                 break;
+
             case Pickups.Eyes:
                 questManager.eyesInventory.Add(pickupType);
                 break;
+
             case Pickups.Boots:
                 questManager.bootsInventory.Add(pickupType);
                 break;
+
             case Pickups.Helmet:
                 questManager.helmetInventory.Add(pickupType);
                 break;
+
             default:
                 break;
         }

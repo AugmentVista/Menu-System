@@ -11,7 +11,7 @@ public class SceneChangeTile : MonoBehaviour
             Scene currentScene = SceneManager.GetActiveScene();
             if (currentScene.name == "GamePlay1")
             {
-                Debug.Log("Active scene is " + currentScene.name);
+                //Debug.Log("Active scene is " + currentScene.name);
                 gameManager.GamePlay2();
             }
         }

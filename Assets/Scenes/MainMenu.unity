@@ -2964,7 +2964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1026974780
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3039,10 +3039,11 @@ MonoBehaviour:
   ringSprite: {fileID: 225165671}
   bootsSprite: {fileID: 628570204}
   helmetSprite: {fileID: 7638033}
+  Water: {fileID: 0}
   eyesUICount: {fileID: 112041229}
   ringUICount: {fileID: 352794830}
   bootsUICount: {fileID: 702267617}
-  helemtUICount: {fileID: 736768978}
+  helmetUICount: {fileID: 736768978}
   inventory: 
   eyesInventory: 
   ringInventory: 
